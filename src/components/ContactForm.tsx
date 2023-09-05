@@ -89,7 +89,7 @@ export default function ContactForm () {
                 aria-hidden="true"
                 className={classNames(
                   agreed ? "translate-x-3.5" : "translate-x-0",
-                  "h-4 w-4 transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
+                  "h-4 w-4 bg-brand-accent transform rounded-full bg-white shadow-sm ring-1 ring-gray-900/5 transition duration-200 ease-in-out"
                 )}
               />
             </Switch>
