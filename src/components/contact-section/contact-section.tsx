@@ -14,7 +14,7 @@ export default function ContactSection() {
     };
     if (formData.contactName && formData.email && formData.message) {
       const fetchString = new URL(
-        "https://4276nx0tf2.execute-api.eu-west-2.amazonaws.com/prod/contact"
+        "https://4276nx0tf2.execute-api.eu-west-2.amazonaws.com/staging/contact"
       );
       fetchString.searchParams.append("contactName", formData.contactName);
       fetchString.searchParams.append("email", formData.email);
