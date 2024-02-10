@@ -189,7 +189,7 @@
 }
 
 .benefit-panel {
-  background: url("/src/assets/benefits-pattern.svg") center center repeat-x;
+  background: url("/assets/benefits-pattern.svg") center center repeat-x;
   width: 100%;
   position: relative;
   overflow: hidden;
