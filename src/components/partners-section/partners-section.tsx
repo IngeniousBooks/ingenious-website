@@ -6,7 +6,7 @@ export default function PartnersSection() {
       <h2>We have collaborated with</h2>
       <img
         className="partners-logos-img"
-        src="/src/assets/partner-logos.png"
+        src="/assets/partner-logos.png"
         alt="A collection of company logos for satisfied clients of ours to include Faber & Faber, Penguin Random House, Hachette Book Group, The FA, Museum of London, and The Open University."
       />
       <div className="end-section-icon">
