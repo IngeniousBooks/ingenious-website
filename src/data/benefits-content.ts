@@ -17,7 +17,7 @@ const benefitsContent: Array<BenefitContent> = [
       "Indexing",
     ],
     image: {
-      src: "/src/assets/benefit-editorial.png",
+      src: "/assets/benefit-editorial.png",
       alt: "Text flow for titled work 'The Stag', exhibiting a range of text types.",
     },
   },
@@ -35,7 +35,7 @@ const benefitsContent: Array<BenefitContent> = [
       "Copyright clearance",
     ],
     image: {
-      src: "/src/assets/benefit-design.png",
+      src: "/assets/benefit-design.png",
       alt: "Recipe book open to reveal a 2-page spread design for pork & beef ramen recipe. Two thirds of the spread is occupied by a stylised outline illustration of chopsticks lifting noodles from a ramen dish",
     },
   },
@@ -51,7 +51,7 @@ const benefitsContent: Array<BenefitContent> = [
       "Flexible and tailored scheduling",
     ],
     image: {
-      src: "/src/assets/benefit-project-management.png",
+      src: "/assets/benefit-project-management.png",
       alt: "A laptop, the hands of its owner visibly at the keyboard. On screen is a kanban project being capably managed.",
     },
   },
