@@ -1,23 +1,43 @@
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [isInvalidSubmit, setIsInvalidSubmit] = useState(true);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = {
-      name: searchParams.get("contact-name"),
+      contactName: searchParams.get("contact-name"),
       email: searchParams.get("email"),
       message: searchParams.get("message"),
     };
+    if (formData.contactName && formData.email && formData.message) {
+      const fetchString = new URL(
+        "https://4276nx0tf2.execute-api.eu-west-2.amazonaws.com/prod/contact"
+      );
+      fetchString.searchParams.append("contactName", formData.contactName);
+      fetchString.searchParams.append("email", formData.email);
+      fetchString.searchParams.append("message", formData.message);
+      fetch(fetchString)
+        .then((response) => {
+          console.log(response);
+          setSearchParams([]);
+        })
+        .catch((error) => {
+          console.log(error);
+          setIsInvalidSubmit(true);
+        });
+    } else {
+      setIsInvalidSubmit(false);
+    }
     console.log(formData);
-    setSearchParams([]);
   }
 
   function handleChange({
     target: { name, value },
   }: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
+    setIsInvalidSubmit(false);
     setSearchParams((prev) => {
       const newSearchParams = new URLSearchParams(prev);
 
@@ -70,6 +90,7 @@ export default function ContactSection() {
             required
           />
         </label>
+        {isInvalidSubmit && <p>Invalid form data. Please try again</p>}
         <button>Send</button>
       </form>
     </section>
