@@ -1,37 +1,30 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
+import submitContact from "../../utils/submit-contact";
 
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isInvalidSubmit, setIsInvalidSubmit] = useState(true);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const formData = {
       contactName: searchParams.get("contact-name"),
       email: searchParams.get("email"),
       message: searchParams.get("message"),
     };
-    if (formData.contactName && formData.email && formData.message) {
-      const fetchString = new URL(
-        "https://4276nx0tf2.execute-api.eu-west-2.amazonaws.com/staging/contact"
+    if (
+      typeof formData.contactName === "string" &&
+      typeof formData.email === "string" &&
+      typeof formData.message === "string"
+    ) {
+      const attemptedContact = await submitContact(
+        formData.contactName,
+        formData.email,
+        formData.message
       );
-      fetchString.searchParams.append("contactName", formData.contactName);
-      fetchString.searchParams.append("email", formData.email);
-      fetchString.searchParams.append("message", formData.message);
-      fetch(fetchString)
-        .then((response) => {
-          console.log(response);
-          setSearchParams([]);
-        })
-        .catch((error) => {
-          console.log(error);
-          setIsInvalidSubmit(true);
-        });
-    } else {
-      setIsInvalidSubmit(false);
+      console.log(attemptedContact);
     }
-    console.log(formData);
   }
 
   function handleChange({
