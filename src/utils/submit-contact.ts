@@ -8,6 +8,8 @@ const submitContact = (contactName: string, email: string, message: string) => {
   fetch(fetchString, {
     method: "POST",
     mode: "cors",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ contactName, email, message }),
   })
     .then((response) => {
       return response;
