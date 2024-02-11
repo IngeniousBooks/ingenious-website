@@ -71,7 +71,7 @@ export default function ContactSection() {
 
   return (
     <section className="contact-section">
-      <h2>Let's discuss your next project</h2>
+      <h2 id="contact">Let's discuss your next project</h2>
       <motion.div layout className="contact-form-renderer">
         {!hasSent && (
           <motion.form
