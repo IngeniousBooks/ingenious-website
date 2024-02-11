@@ -4,7 +4,6 @@ const submitContact = async (
   message: string
 ) => {
   const queryString = import.meta.env.VITE_CONTACT_API_STRING as string;
-  console.log(queryString);
   try {
     const response = await fetch(queryString, {
       method: "POST",
@@ -12,7 +11,8 @@ const submitContact = async (
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contactName, email, message }),
     });
-    return response;
+    const data = await response.json();
+    return data;
   } catch (err) {
     console.log(err);
   }
