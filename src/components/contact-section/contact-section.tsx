@@ -4,7 +4,7 @@ import submitContact from "../../utils/submit-contact";
 
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [isInvalidSubmit, setIsInvalidSubmit] = useState(true);
+  const [isInvalidSubmit, setIsInvalidSubmit] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
