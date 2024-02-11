@@ -3,9 +3,8 @@ const submitContact = async (
   email: string,
   message: string
 ) => {
-  const fetchString = new URL(process.env.CONTACT_API_STRING as string);
   try {
-    const response = await fetch(fetchString, {
+    const response = await fetch(process.env.CONTACT_API_STRING as string, {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
