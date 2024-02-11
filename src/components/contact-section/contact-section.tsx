@@ -23,7 +23,7 @@ export default function ContactSection() {
         formData.email,
         formData.message
       );
-      console.log(attemptedContact);
+      console.log(attemptedContact?.message);
     }
   }
 
