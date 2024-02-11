@@ -1,5 +1,5 @@
-import DarkLeftButton from "./dark-left-button";
-import DarkRightButton from "./dark-right-button";
+import DarkLeftButton from "../ui/dark-left-button";
+import DarkRightButton from "../ui/dark-right-button";
 import IngeniousIcon from "../ui/icon";
 
 export default function TestimonialsCarousel() {
