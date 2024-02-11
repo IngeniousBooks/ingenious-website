@@ -11,10 +11,9 @@ const submitContact = async (
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contactName, email, message }),
     });
-    const parsedData = (await response.json()) as {
-      isSuccess: boolean;
-      message: string;
-    };
+    console.log(response.body, "<< response.body");
+    const parsedData = await response.json();
+    console.log(parsedData, "<< parsed data");
     return parsedData;
   } catch (err) {
     console.log(err);
