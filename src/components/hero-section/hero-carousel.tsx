@@ -15,7 +15,7 @@ export default function HeroCarousel() {
   };
 
   useEffect(() => {
-    let intervalId: number | null = null;
+    let intervalId: NodeJS.Timeout | null = null;
 
     const handleAutoplay = () => {
       if (!isPaused) {
