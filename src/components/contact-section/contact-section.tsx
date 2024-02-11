@@ -1,15 +1,16 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import submitContact from "../../utils/submit-contact";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isInvalidSubmit, setIsInvalidSubmit] = useState(false);
   const [hasSent, setHasSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [token, setToken] = useState("");
 
   const handleFormReset = () => {
-    console.log("form reset");
     window.scrollTo({ top: 0, behavior: "smooth" });
     setSearchParams([]);
     setHasSent(false);
@@ -18,10 +19,12 @@ export default function ContactSection() {
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setIsLoading(true);
+
     const formData = {
       contactName: searchParams.get("contact-name"),
       email: searchParams.get("email"),
       message: searchParams.get("message"),
+      "g-recaptcha-response": token,
     };
     if (
       typeof formData.contactName === "string" &&
@@ -34,8 +37,7 @@ export default function ContactSection() {
           formData.email,
           formData.message
         );
-        console.log(responseStatus);
-        if (responseStatus?.status === 200) {
+        if (responseStatus === 200) {
           setIsLoading(false);
           setHasSent(true);
         } else {
@@ -109,8 +111,27 @@ export default function ContactSection() {
               disabled={isLoading}
             />
           </label>
-          {isInvalidSubmit && <p>Something went wrong. Please try again</p>}
-          <button disabled={isLoading || hasSent}>
+          {isInvalidSubmit && <p>Something went wrong. Please try again...</p>}
+
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              justifyContent: "center",
+              padding: "2rem 1rem 1rem 2rem",
+            }}
+          >
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={(token: string | null) => {
+                if (token !== null) setToken(token);
+                setTimeout(() => {
+                  setToken("");
+                }, 85000);
+              }}
+            />
+          </div>
+          <button disabled={isLoading || hasSent} hidden={!token}>
             {isLoading ? "Sending" : "Send"}
           </button>
         </form>

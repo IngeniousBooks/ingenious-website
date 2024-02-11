@@ -5,15 +5,19 @@ const submitContact = async (
 ) => {
   const queryString = import.meta.env.VITE_CONTACT_API_STRING as string;
   try {
-    const { status, statusText } = await fetch(queryString, {
+    const { status } = await fetch(queryString, {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contactName, email, message }),
     });
-    return { status, statusText };
+    return status;
   } catch (err) {
-    console.log(err);
+    if (err instanceof Error) {
+      return err.message;
+    } else {
+      return "Error: Something went wrong... " + err;
+    }
   }
 };
 
