@@ -2,6 +2,7 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import submitContact from "../../utils/submit-contact";
 import ReCAPTCHA from "react-google-recaptcha";
+import { motion } from "framer-motion";
 
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -70,85 +71,102 @@ export default function ContactSection() {
 
   return (
     <section className="contact-section">
-      <h2 id="contact">Let's discuss your next project</h2>
-      {!hasSent && (
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name{" "}
-            <input
-              type="text"
-              name="contact-name"
-              id="contact-name"
-              value={searchParams.get("contact-name") || ""}
-              onChange={handleChange}
-              minLength={2}
-              required
-              disabled={isLoading}
-            />
-          </label>
-          <label>
-            Email address
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value={searchParams.get("email") || ""}
-              onChange={handleChange}
-              required
-              disabled={isLoading}
-            />
-          </label>
-          <label>
-            Message
-            <textarea
-              name="message"
-              id="message"
-              rows={8}
-              value={searchParams.get("message") || ""}
-              onChange={handleChange}
-              minLength={25}
-              required
-              disabled={isLoading}
-            />
-          </label>
-          {isInvalidSubmit && <p>Something went wrong. Please try again...</p>}
+      <h2>Let's discuss your next project</h2>
+      <motion.div layout className="contact-form-renderer">
+        {!hasSent && (
+          <motion.form
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            onSubmit={handleSubmit}
+          >
+            <label>
+              Name{" "}
+              <input
+                type="text"
+                name="contact-name"
+                id="contact-name"
+                value={searchParams.get("contact-name") || ""}
+                onChange={handleChange}
+                minLength={2}
+                required
+                disabled={isLoading}
+              />
+            </label>
+            <label>
+              Email address
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={searchParams.get("email") || ""}
+                onChange={handleChange}
+                required
+                disabled={isLoading}
+              />
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                id="message"
+                rows={8}
+                value={searchParams.get("message") || ""}
+                onChange={handleChange}
+                minLength={25}
+                required
+                disabled={isLoading}
+              />
+            </label>
+            {isInvalidSubmit && (
+              <p>Something went wrong. Please try again...</p>
+            )}
 
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              justifyContent: "center",
-              padding: "2rem 1rem 1rem 2rem",
-            }}
-          >
-            <ReCAPTCHA
-              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-              onChange={(token: string | null) => {
-                if (token !== null) setToken(token);
-                setTimeout(() => {
-                  setToken("");
-                }, 85000);
+            <div
+              style={{
+                width: "100%",
+                display: "flex",
+                justifyContent: "center",
+                padding: "2rem 1rem 1rem 2rem",
               }}
-            />
-          </div>
-          <button disabled={isLoading || hasSent} hidden={!token}>
-            {isLoading ? "Sending" : "Send"}
-          </button>
-        </form>
-      )}
-      {hasSent && (
-        <section className="contact-success-section">
-          <p className="contact-success-message">
-            Message success. You'll hear back from us soon.
-          </p>
-          <button
-            className="contact-success-button"
-            onClick={() => handleFormReset()}
-          >
-            Return to Site
-          </button>
-        </section>
-      )}
+            >
+              <ReCAPTCHA
+                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                onChange={(token: string | null) => {
+                  if (token !== null) setToken(token);
+                  setTimeout(() => {
+                    setToken("");
+                  }, 85000);
+                }}
+              />
+            </div>
+            <button disabled={isLoading || hasSent} hidden={!token}>
+              {isLoading ? "Sending" : "Send"}
+            </button>
+          </motion.form>
+        )}
+        {hasSent && (
+          <>
+            <motion.p
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="contact-success-message"
+            >
+              Message success. You'll hear back from us soon.
+            </motion.p>
+            <motion.button
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1 }}
+              className="contact-success-button"
+              onClick={() => handleFormReset()}
+            >
+              Return to Site
+            </motion.button>
+          </>
+        )}
+      </motion.div>
     </section>
   );
 }

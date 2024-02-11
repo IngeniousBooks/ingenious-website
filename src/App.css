@@ -267,15 +267,16 @@ circle {
   }
 }
 
-form {
-  display: inherit;
-  flex-direction: inherit;
+.contact-form-renderer {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 45%;
+  min-width: 40%;
   padding: 1rem 2rem;
   background-color: var(--l-cream);
   border-radius: 0.5rem;
+  transition: height 0.8s ease-in-out;
   button {
     margin: 1rem;
     text-transform: uppercase;
@@ -319,6 +320,11 @@ textarea {
   margin-top: 0.6rem;
   font-weight: 400;
   font-size: 1.6rem;
+}
+
+.contact-success-message {
+  font-size: 1.8rem;
+  color: var(--d-grey);
 }
 
 footer {
