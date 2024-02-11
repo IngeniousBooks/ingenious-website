@@ -5,16 +5,13 @@ const submitContact = async (
 ) => {
   const queryString = import.meta.env.VITE_CONTACT_API_STRING as string;
   try {
-    const response = await fetch(queryString, {
+    const { status, statusText } = await fetch(queryString, {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ contactName, email, message }),
     });
-    console.log(response.body, "<< response.body");
-    const parsedData = await response.json();
-    console.log(parsedData, "<< parsed data");
-    return parsedData;
+    return { status, statusText };
   } catch (err) {
     console.log(err);
   }
