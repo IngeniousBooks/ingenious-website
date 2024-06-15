@@ -9,11 +9,8 @@ export default function NavLinks() {
       <Link smooth to="/#services">
         <li>services</li>
       </Link>
-      <Link smooth to="/#testimonials">
-        <li>testimonials</li>
-      </Link>
-      <Link smooth to="/#contact">
-        <li>contact</li>
+      <Link smooth to="/#pricing">
+        <li>pricing</li>
       </Link>
     </ul>
   );
