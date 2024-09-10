@@ -22,6 +22,10 @@ export default function Home() {
       <BenefitsSection />
       <FeatureTestimonial props={featureTestimonialContent.bryna} />
       <CallToAction ctaText="Become another publishing success story with Ingenious!" />
+      <DividerImage
+        imageUrl="public/assets/divider-images/books-open-top-down.jpg"
+        altText=""
+      />
       <PartnersSection />
       <ContactSection />
     </>
