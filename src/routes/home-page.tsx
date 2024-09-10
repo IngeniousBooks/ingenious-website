@@ -6,6 +6,8 @@ import ServicesSection from "../components/services-section/services-section";
 import BenefitsSection from "../components/benefits-section/benefits-section";
 import DividerImage from "../components/ui/divider-image";
 import CallToAction from "../components/ui/call-to-action";
+import FeatureTestimonial from "../components/feature-testimonial/feature-testimonial";
+import { featureTestimonialContent } from "../data/feature-testimonial-content";
 
 export default function Home() {
   return (
@@ -18,6 +20,7 @@ export default function Home() {
         altText="Eleven vibrant books scattered across a white table, spines visible"
       />
       <BenefitsSection />
+      <FeatureTestimonial props={featureTestimonialContent.bryna} />
       <CallToAction ctaText="Become another publishing success story with Ingenious!" />
       <PartnersSection />
       <ContactSection />

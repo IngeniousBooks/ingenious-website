@@ -38,7 +38,11 @@ export default function SolutionPanel({
           <IngeniousIcon sizeMultiplier={1.5} />
         </div>
         {order === "odd" && (
-          <SquiggleDivider className={styles["squiggle-divider"]} />
+          <SquiggleDivider
+            className={styles["squiggle-divider"]}
+            topColour="#fbf5ef"
+            bottomColour="white"
+          />
         )}
       </article>
     </>
