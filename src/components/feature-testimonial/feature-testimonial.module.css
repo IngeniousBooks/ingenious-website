@@ -1,0 +1,70 @@
+.feature-testimonial-section {
+  position: relative;
+  background-color: var(--l-cream);
+  h2 {
+    padding: 4rem 5rem 8rem 5rem;
+    margin: 0;
+    color: var(--white);
+    background-image: url(public/assets/orange-squiggle-panel.svg);
+    background-size: cover;
+    background-position: center 10%;
+    text-align: center;
+  }
+
+  h3 {
+    padding: 1rem 20%;
+    text-align: center;
+    margin: 0;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 100;
+  }
+  li::marker {
+    color: var(--brand-orange);
+  }
+}
+
+.feature-testimonial {
+  padding: 3rem;
+  display: grid;
+  grid-auto-columns: 50% 50%;
+  grid-template-areas: "text media" "text media" "list logo";
+}
+
+.feature-testimonial__text__body,
+.feature-testimonial__list-intro {
+  grid-area: text;
+  padding: 0 3rem;
+  span {
+    color: var(--d-grey);
+    font-weight: 300;
+  }
+}
+
+.feature-testimonial__text__list {
+  padding-left: 5rem;
+  li {
+    font-size: 1.2rem;
+    font-weight: 200;
+    padding-top: 0.2rem;
+  }
+  grid-area: list;
+}
+
+.feature-testimonial__media {
+  grid-area: media;
+  padding: 3rem;
+}
+
+.feature-testimonial__partner-logo {
+  padding-top: 3rem;
+}
+
+.feature-testimonial-icon {
+  position: absolute;
+  bottom: -8%;
+  right: 50%;
+  transform: translate(43%, -50%);
+}
