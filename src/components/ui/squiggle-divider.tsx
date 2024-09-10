@@ -23,7 +23,7 @@ export default function SquiggleDivider({
         </clipPath>
       </defs>
       <g transform="translate(1920 570) rotate(180)">
-        <rect fill={topColour} />
+        <rect width="100%" height="100%" fill={topColour} />
       </g>
       <g>
         <path

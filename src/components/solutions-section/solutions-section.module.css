@@ -6,6 +6,7 @@
   align-items: center;
   text-align: left;
   position: relative;
+  overflow: hidden;
   z-index: 2;
 
   h2 {

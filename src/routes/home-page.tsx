@@ -8,6 +8,7 @@ import DividerImage from "../components/ui/divider-image";
 import CallToAction from "../components/ui/call-to-action";
 import FeatureTestimonial from "../components/feature-testimonial/feature-testimonial";
 import { featureTestimonialContent } from "../data/feature-testimonial-content";
+import TheIngeniousWaySection from "../components/the-ingenious-way-section/the-ingenious-way-section";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         imageUrl="public/assets/divider-images/books-open-top-down.jpg"
         altText=""
       />
+      <TheIngeniousWaySection />
       <PartnersSection />
       <ContactSection />
     </>
