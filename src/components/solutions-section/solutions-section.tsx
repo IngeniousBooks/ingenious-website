@@ -1,5 +1,4 @@
 import { solutionsContent } from "../../data/solutions-content";
-import SquiggleDivider from "../ui/squiggle-divider";
 import SolutionPanel from "./solution-panel";
 import styles from "./solutions-section.module.css";
 
@@ -18,7 +17,6 @@ export default function SolutionsSection() {
         solutionText={freeUpResourcesSolution.solutionText}
         backgroundColour="l-cream"
       />
-      <SquiggleDivider className={styles["squiggle-divider"]} />
       <SolutionPanel
         key={helpIndependentPublishersSolution.heading}
         heading={helpIndependentPublishersSolution.heading}

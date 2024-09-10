@@ -7,7 +7,6 @@
   text-align: left;
   position: relative;
   z-index: 2;
-  padding: 0rem;
 
   h2 {
     text-align: center;
@@ -29,7 +28,6 @@
   justify-content: space-evenly;
   align-items: flex-start;
   padding: 2rem;
-  margin: 2rem;
   z-index: 2;
 
   img {
@@ -40,7 +38,6 @@
 
 .even {
   flex-direction: row-reverse;
-  margin-top: 5rem;
 }
 
 .solution-panel__icon--odd {
@@ -78,8 +75,10 @@
 }
 
 .squiggle-divider {
-  z-index: 1;
+  z-index: 2;
   position: absolute;
+  bottom: 0;
+  transform: translateY(45%);
 }
 
 .white {

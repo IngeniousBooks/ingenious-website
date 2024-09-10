@@ -2,6 +2,7 @@ import { SolutionContent } from "../../data/solutions-content";
 import ParsedTextContent from "../../utils/parsed-text-content";
 import IngeniousIcon from "../ui/icon";
 import styles from "./solutions-section.module.css";
+import SquiggleDivider from "../ui/squiggle-divider";
 
 export default function SolutionPanel({
   heading,
@@ -36,6 +37,9 @@ export default function SolutionPanel({
         <div className={styles[`solution-panel__icon--${order}`]}>
           <IngeniousIcon sizeMultiplier={1.5} />
         </div>
+        {order === "odd" && (
+          <SquiggleDivider className={styles["squiggle-divider"]} />
+        )}
       </article>
     </>
   );
