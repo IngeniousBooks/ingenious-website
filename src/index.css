@@ -33,6 +33,29 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.heavy-heading {
+  font-weight: 800;
+}
+.mid-heading {
+  font-weight: 400;
+}
+.slim-heading {
+  font-weight: 200;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+.brand {
+  color: var(--brand-orange);
+}
+
 button {
   background-color: var(--brand-orange);
   font-size: 1.5rem;

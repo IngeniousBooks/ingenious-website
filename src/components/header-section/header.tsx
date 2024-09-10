@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Logo from "../ui/logo";
 import NavLinks from "./nav-links";
 import VerticalLine from "./vertical-line";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link";
+import styles from "./header.module.css";
 export default function Header() {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -25,11 +26,17 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <header className={`header ${show ? "" : "hidden"}`}>
-      <Link to="/">{<Logo colour={"black"} />}</Link>
+    <header className={`${styles["header"]} ${show ? "" : "hidden"}`}>
+      <Link to="/">{<Logo colour={"black"} sizeMultiplier={1} />}</Link>
       <VerticalLine />
       <NavLinks />
-      <button className="header-button">book a meeting</button>
+      <section>
+        <Link smooth to="/#contact">
+          <button className="header-button">book a meeting</button>
+        </Link>
+        <p className="brand">team@ingenious-books.com</p>
+        <p className="brand">07822 014130</p>
+      </section>
     </header>
   );
 }

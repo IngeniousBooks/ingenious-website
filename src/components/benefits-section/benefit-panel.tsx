@@ -1,34 +1,20 @@
-import IngeniousIcon from "../ui/icon";
 import { BenefitContent } from "../../data/benefits-content";
+import IngeniousIcon from "../ui/icon";
 
 export default function BenefitPanel({
-  benefit,
-  index,
-}: {
-  benefit: BenefitContent;
-  index: number;
-}) {
+  iconURL,
+  benefitName,
+  benefitDescription,
+}: BenefitContent) {
   return (
     <article className="benefit-panel">
-      <div className="benefit-panel-text-content">
-        <h3>{benefit.heading}</h3>
-        <p>{benefit.bodyText}</p>
-        <ul>
-          {benefit.list.map((item) => (
-            <li key={item}>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <img
-        className="benefit-panel-img"
-        src={benefit.image.src}
-        alt={benefit.image.alt}
-      />
-      <div className={`benefit-panel-icon-${index % 2 === 0 ? "odd" : "even"}`}>
+      {iconURL ? (
+        <img src={iconURL} alt={benefitName + " icon"} />
+      ) : (
         <IngeniousIcon />
-      </div>
+      )}
+      <h3>{benefitName}</h3>
+      <p>{benefitDescription}</p>
     </article>
   );
 }

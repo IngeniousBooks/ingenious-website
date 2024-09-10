@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 4rem;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: var(--white);
+  transition: transform 0.8s ease;
+
+  li {
+    list-style-type: none;
+    font-family: "sofia-pro", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  li:hover {
+    cursor: pointer;
+    font-weight: 700;
+    transition: font-weight 0.3s ease-in-out;
+  }
+
+  button:hover {
+    background-color: var(--l-cream);
+    color: var(--brand-orange);
+    box-shadow: 0 0 0 5px var(--brand-orange), inset 0 0 0 1px #fff;
+    transition: background-color 1s ease-in-out;
+    transition: box-shadow 0.4s ease-in-out;
+    cursor: pointer;
+  }
+}

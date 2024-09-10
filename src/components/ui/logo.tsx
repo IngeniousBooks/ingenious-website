@@ -1,14 +1,15 @@
 interface LogoProps {
-  colour: string;
+  colour: "white" | "black";
+  sizeMultiplier: number;
 }
 
-export default function Logo({ colour }: LogoProps) {
+export default function Logo({ colour, sizeMultiplier }: LogoProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="260.97"
-      height="37.614"
+      width={260.97 * sizeMultiplier}
+      height={37.614 * sizeMultiplier}
       viewBox="0 0 260.97 37.614"
     >
       <defs>
