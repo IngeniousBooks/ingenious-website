@@ -1,0 +1,41 @@
+.services-section {
+  h2 {
+    padding-bottom: 3rem;
+  }
+  h2,
+  h3,
+  p {
+    color: var(--white);
+    margin: 2rem;
+  }
+
+  background-color: var(--d-grey);
+  padding: 3rem;
+
+  text-align: center;
+}
+
+.services-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+.service-panel {
+  max-width: 25%;
+  p {
+    padding: 2rem;
+  }
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 6rem;
+
+  button {
+    margin: 2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}

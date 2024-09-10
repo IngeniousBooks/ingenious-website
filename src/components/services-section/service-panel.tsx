@@ -1,5 +1,6 @@
 import { ServicesContent } from "../../data/services-content";
 import IngeniousIcon from "../ui/icon";
+import styles from "./services-section.module.css";
 
 export default function ServicePanel({
   iconURL,
@@ -7,11 +8,11 @@ export default function ServicePanel({
   serviceDescription,
 }: ServicesContent) {
   return (
-    <article className="services-section__service-panel">
+    <article className={styles["service-panel"]}>
       {iconURL ? (
         <img src={iconURL} alt={serviceName + " icon"} />
       ) : (
-        <IngeniousIcon />
+        <IngeniousIcon sizeMultiplier={1} />
       )}
       <h3>{serviceName}</h3>
       <p>{serviceDescription}</p>

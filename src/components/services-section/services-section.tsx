@@ -1,17 +1,20 @@
 import { servicesContent } from "../../data/services-content";
 import ServicePanel from "./service-panel";
+import styles from "./services-section.module.css";
 
 export default function ServicesSection() {
   return (
-    <section className="services-section">
+    <section className={styles["services-section"]}>
       <h2>Our Services</h2>
-      {servicesContent.map(({ iconURL, serviceName, serviceDescription }) => (
-        <ServicePanel
-          iconURL={iconURL}
-          serviceName={serviceName}
-          serviceDescription={serviceDescription}
-        />
-      ))}
+      <div className={styles["services-wrapper"]}>
+        {servicesContent.map(({ iconURL, serviceName, serviceDescription }) => (
+          <ServicePanel
+            iconURL={iconURL}
+            serviceName={serviceName}
+            serviceDescription={serviceDescription}
+          />
+        ))}
+      </div>
     </section>
   );
 }
