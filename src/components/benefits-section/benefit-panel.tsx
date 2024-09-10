@@ -1,5 +1,6 @@
 import { BenefitContent } from "../../data/benefits-content";
 import IngeniousIcon from "../ui/icon";
+import styles from "./benefits-section.module.css";
 
 export default function BenefitPanel({
   iconURL,
@@ -7,11 +8,11 @@ export default function BenefitPanel({
   benefitDescription,
 }: BenefitContent) {
   return (
-    <article className="benefit-panel">
+    <article className={styles["benefit-panel"]}>
       {iconURL ? (
         <img src={iconURL} alt={benefitName + " icon"} />
       ) : (
-        <IngeniousIcon />
+        <IngeniousIcon sizeMultiplier={1} />
       )}
       <h3>{benefitName}</h3>
       <p>{benefitDescription}</p>
