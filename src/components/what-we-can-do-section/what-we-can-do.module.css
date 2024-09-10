@@ -1,0 +1,44 @@
+.what-we-can-do-section {
+  position: relative;
+  background-color: var(--l-cream);
+
+  h2 {
+    margin-top: 0;
+
+    padding: 6rem 5rem;
+    color: var(--white);
+    background-image: url(public/assets/orange-squiggle-panel.svg);
+    background-size: cover;
+    background-position: center 30%;
+    text-align: center;
+  }
+}
+
+.what-we-can-do-text {
+  padding: 1rem 10rem;
+}
+
+.what-we-can-do-intro {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.what-we-can-do-list {
+  li {
+    max-width: 80%;
+    display: flex;
+    img {
+      padding: 4rem;
+    }
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.service-description {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}

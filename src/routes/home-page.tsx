@@ -9,6 +9,7 @@ import CallToAction from "../components/ui/call-to-action";
 import FeatureTestimonial from "../components/feature-testimonial/feature-testimonial";
 import { featureTestimonialContent } from "../data/feature-testimonial-content";
 import TheIngeniousWaySection from "../components/the-ingenious-way-section/the-ingenious-way-section";
+import WhatWeCanDoSection from "../components/what-we-can-do-section/what-we-can-do";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
         altText=""
       />
       <TheIngeniousWaySection />
+      <WhatWeCanDoSection />
       <PartnersSection />
       <ContactSection />
     </>
