@@ -5,6 +5,7 @@ import SolutionsSection from "../components/solutions-section/solutions-section"
 import ServicesSection from "../components/services-section/services-section";
 import BenefitsSection from "../components/benefits-section/benefits-section";
 import DividerImage from "../components/ui/divider-image";
+import CallToAction from "../components/ui/call-to-action";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         altText="Eleven vibrant books scattered across a white table, spines visible"
       />
       <BenefitsSection />
+      <CallToAction ctaText="Become another publishing success story with Ingenious!" />
       <PartnersSection />
       <ContactSection />
     </>

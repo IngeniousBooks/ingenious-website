@@ -5,7 +5,7 @@ export interface DividerImageProps {
 
 export default function DividerImage({ imageUrl, altText }: DividerImageProps) {
   return (
-    <div
+    <section
       style={{
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
@@ -15,6 +15,6 @@ export default function DividerImage({ imageUrl, altText }: DividerImageProps) {
         height: "50vh",
       }}
       aria-label={altText}
-    ></div>
+    ></section>
   );
 }
