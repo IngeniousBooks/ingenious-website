@@ -9,9 +9,15 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 70) {
+    const currentScroll = window.scrollY;
+    const SHOW_THRESHOLD = 40;
+    if (currentScroll > lastScrollY && window.scrollY > 70) {
       setShow(false);
-    } else {
+    } else if (
+      (currentScroll < lastScrollY &&
+        currentScroll < lastScrollY - SHOW_THRESHOLD) ||
+      currentScroll < 5
+    ) {
       setShow(true);
     }
     setLastScrollY(window.scrollY);
