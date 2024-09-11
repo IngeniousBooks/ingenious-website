@@ -8,7 +8,7 @@ export default function ServicePanel({
   serviceDescription,
 }: ServicesContent) {
   return (
-    <article className={styles["pricing-panel"]}>
+    <article className={styles["service-panel"]}>
       {iconURL ? (
         <img src={iconURL} alt={serviceName + " icon"} />
       ) : (

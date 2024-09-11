@@ -17,14 +17,14 @@
 
 .services-wrapper {
   display: flex;
-  justify-content: space-evenly;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .service-panel {
-  max-width: 25%;
+  max-width: 32%;
   p {
-    padding: 2rem;
+    font-size: 1.5rem;
   }
   justify-content: space-between;
   align-items: center;

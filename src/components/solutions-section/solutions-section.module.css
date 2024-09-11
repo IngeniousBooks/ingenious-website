@@ -7,7 +7,7 @@
   text-align: left;
   position: relative;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
 
   h2 {
     text-align: center;
@@ -30,7 +30,6 @@
   align-items: flex-start;
   padding: 4rem 4rem;
   z-index: 2;
-
   img {
     max-width: 50%;
     margin: 4rem;
@@ -75,11 +74,19 @@
   }
 }
 
+.squiggle-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin: 2% 0;
+}
+
 .squiggle-divider {
-  z-index: 2;
+  z-index: 1;
   position: absolute;
-  bottom: 0;
-  transform: translateY(45%);
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 100%;
 }
 
 .white {
