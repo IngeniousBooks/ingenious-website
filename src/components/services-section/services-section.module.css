@@ -9,6 +9,10 @@
     margin: 2rem;
   }
 
+  button {
+    margin-bottom: 1rem;
+  }
+
   background-color: var(--d-grey);
   padding: 3rem;
 
@@ -29,7 +33,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding-bottom: 6rem;
+  padding-bottom: 3rem;
 
   button {
     margin: 2rem;

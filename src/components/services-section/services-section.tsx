@@ -15,6 +15,7 @@ export default function ServicesSection() {
           />
         ))}
       </div>
+      <button>book a meeting</button>
     </section>
   );
 }

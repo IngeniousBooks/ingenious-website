@@ -16,7 +16,6 @@ export default function ServicePanel({
       )}
       <h3>{serviceName}</h3>
       <p>{serviceDescription}</p>
-      <button>find out more</button>
     </article>
   );
 }
