@@ -1,6 +1,6 @@
 import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../ui/logo";
-import SquigglyLine from "./squiggly-line";
+import SquigglyLine from "../ui/squiggly-line";
 import styles from "./hero-section.module.css";
 
 export default function HeroSection() {
