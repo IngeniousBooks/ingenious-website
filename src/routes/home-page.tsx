@@ -1,5 +1,4 @@
 import HeroSection from "../components/hero-section/hero-section";
-import ContactSection from "../components/contact-section/contact-section";
 import SolutionsSection from "../components/solutions-section/solutions-section";
 import ServicesSection from "../components/services-section/services-section";
 import BenefitsSection from "../components/benefits-section/benefits-section";
@@ -42,7 +41,6 @@ export default function Home() {
         altText="Ingenious logo in white against vibrant background with perceptible eye-catching books"
       />
       <FAQSection />
-      <ContactSection />
     </>
   );
 }
