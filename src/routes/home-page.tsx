@@ -10,6 +10,7 @@ import FeatureTestimonial from "../components/feature-testimonial/feature-testim
 import { featureTestimonialContent } from "../data/feature-testimonial-content";
 import TheIngeniousWaySection from "../components/the-ingenious-way-section/the-ingenious-way-section";
 import WhatWeCanDoSection from "../components/what-we-can-do-section/what-we-can-do";
+import PricingSection from "../components/pricing-section/pricing-section";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
         altText="Jim and Paul flicking through their books, discussion design philosophy"
       />
       <CallToAction ctaText="Ready to get started?" />
+      <PricingSection />
       <PartnersSection />
       <ContactSection />
     </>

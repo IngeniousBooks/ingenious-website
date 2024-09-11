@@ -1,0 +1,72 @@
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--white);
+
+  text-align: center;
+  button {
+    font-size: 2rem;
+    font-weight: 400;
+    width: 40%;
+    z-index: 3;
+    margin: 3rem;
+  }
+}
+
+.service-pricing-wrapper {
+  min-width: 80%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  z-index: 2;
+}
+
+.pricing-panel {
+  width: 30%;
+  img {
+    padding: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-bottom: 6rem;
+  z-index: 3;
+}
+
+.pricing-squiggle {
+  z-index: 1;
+  margin: -15rem;
+}
+
+.colin-testimonial {
+  z-index: 3;
+  background-color: var(--l-cream);
+  width: 100%;
+  padding: 1rem 3rem;
+  img {
+    width: 50%;
+  }
+  .colin-quotation {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 8rem;
+  }
+
+  .colin-title {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+  .velocity-press-description {
+    font-size: 1.5rem;
+  }
+}

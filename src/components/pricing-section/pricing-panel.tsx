@@ -1,12 +1,17 @@
 import { ServicesContent } from "../../data/services-content";
 import IngeniousIcon from "../ui/icon";
-import styles from "./services-section.module.css";
+import styles from "./pricing-section.module.css";
 
-export default function ServicePanel({
+type PricingPanelProps = { price: string } & Pick<
+  ServicesContent,
+  "iconURL" | "serviceName"
+>;
+
+export default function PricingPanel({
   iconURL,
   serviceName,
-  serviceDescription,
-}: ServicesContent) {
+  price,
+}: PricingPanelProps) {
   return (
     <article className={styles["pricing-panel"]}>
       {iconURL ? (
@@ -14,9 +19,9 @@ export default function ServicePanel({
       ) : (
         <IngeniousIcon sizeMultiplier={1} />
       )}
-      <h3>{serviceName}</h3>
-      <p>{serviceDescription}</p>
-      <button>find out more</button>
+      <h3 className="brand">{serviceName}</h3>
+      <p>from</p>
+      <p>£{price}</p>
     </article>
   );
 }
