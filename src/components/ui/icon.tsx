@@ -1,5 +1,5 @@
 interface IconProps {
-  sizeMultiplier: number;
+  sizeMultiplier?: number;
 }
 
 export default function IngeniousIcon({ sizeMultiplier }: IconProps) {

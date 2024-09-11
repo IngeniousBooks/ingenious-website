@@ -1,11 +1,10 @@
 import { HashLink as Link } from "react-router-hash-link";
 import Logo from "../ui/logo";
-import SquigglyLine from "../ui/squiggly-line";
 import styles from "./hero-section.module.css";
 
 export default function HeroSection() {
   return (
-    <section className={styles["hero-section"]}>
+    <section id="hero" className={styles["hero-section"]}>
       <img
         className={styles["hero-image"]}
         src="/assets/hero-books/hero-books.jpg"
@@ -18,7 +17,6 @@ export default function HeroSection() {
         <span className="mid-heading upper brand"> Happy Authors,</span>
         <span className="slim-heading upper brand"> Peace of Mind</span>
       </h2>
-      <SquigglyLine />
       <p>
         Exceptional editorial, design and book management services for
         independent publishers

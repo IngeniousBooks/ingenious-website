@@ -9,14 +9,20 @@ export default function Header() {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const controlNavbar = () => {
-    const currentScroll = window.scrollY;
+    const currentScrollY = window.scrollY;
     const SHOW_THRESHOLD = 40;
-    if (currentScroll > lastScrollY && window.scrollY > 70) {
+    const JUMP_THRESHHOLD = 200;
+
+    const isLargeJump =
+      Math.abs(currentScrollY - lastScrollY) > JUMP_THRESHHOLD;
+
+    if (currentScrollY > lastScrollY && window.scrollY > 70) {
       setShow(false);
     } else if (
-      (currentScroll < lastScrollY &&
-        currentScroll < lastScrollY - SHOW_THRESHOLD) ||
-      currentScroll < 5
+      (!isLargeJump &&
+        currentScrollY < lastScrollY &&
+        currentScrollY < lastScrollY - SHOW_THRESHOLD) ||
+      currentScrollY < 8
     ) {
       setShow(true);
     }
@@ -32,7 +38,10 @@ export default function Header() {
   }, [lastScrollY]);
 
   return (
-    <header className={`${styles["header"]} ${show ? "" : "hidden"}`}>
+    <header
+      id="header"
+      className={`${styles["header"]} ${show ? "" : "hidden"}`}
+    >
       <Link to="/">{<Logo colour={"black"} sizeMultiplier={1} />}</Link>
       <VerticalLine />
       <NavLinks />

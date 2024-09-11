@@ -6,7 +6,7 @@ import { houseColours } from "../../data/house-style";
 
 export default function PricingSection() {
   return (
-    <section className={styles["pricing-section"]}>
+    <section id="pricing" className={styles["pricing-section"]}>
       <h2>Pricing</h2>
       <div className={styles["service-pricing-wrapper"]}>
         {servicesContent.map(({ iconURL, serviceName }) => (

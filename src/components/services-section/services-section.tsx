@@ -4,7 +4,7 @@ import styles from "./services-section.module.css";
 
 export default function ServicesSection() {
   return (
-    <section className={styles["services-section"]}>
+    <section id="services" className={styles["services-section"]}>
       <h2>Our Services</h2>
       <div className={styles["services-wrapper"]}>
         {servicesContent.map(({ iconURL, serviceName, serviceDescription }) => (
