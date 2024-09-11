@@ -5,7 +5,7 @@
   h2 {
     margin-top: 0;
 
-    padding: 6rem 5rem;
+    padding: 8rem 5rem;
     color: var(--white);
     background-image: url(public/assets/orange-squiggle-panel.svg);
     background-size: cover;
@@ -16,6 +16,10 @@
 
 .what-we-can-do-text {
   padding: 1rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .what-we-can-do-intro {
@@ -26,8 +30,10 @@
 
 .what-we-can-do-list {
   li {
-    max-width: 80%;
+    margin-left: 2rem;
+    width: 90%;
     display: flex;
+    justify-content: flex-start;
     img {
       padding: 4rem;
     }

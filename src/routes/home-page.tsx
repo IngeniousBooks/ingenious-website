@@ -26,10 +26,15 @@ export default function Home() {
       <CallToAction ctaText="Become another publishing success story with Ingenious!" />
       <DividerImage
         imageUrl="public/assets/divider-images/books-open-top-down.jpg"
-        altText=""
+        altText="top-down view of a set of colourful book full-page spreads"
       />
       <TheIngeniousWaySection />
       <WhatWeCanDoSection />
+      <DividerImage
+        imageUrl="public/assets/divider-images/flicking-through-books.jpg"
+        altText="Jim and Paul flicking through their books, discussion design philosophy"
+      />
+      <CallToAction ctaText="Ready to get started?" />
       <PartnersSection />
       <ContactSection />
     </>

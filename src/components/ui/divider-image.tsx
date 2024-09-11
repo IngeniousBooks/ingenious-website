@@ -12,7 +12,7 @@ export default function DividerImage({ imageUrl, altText }: DividerImageProps) {
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
         width: "100%",
-        height: "50vh",
+        height: "60vh",
       }}
       aria-label={altText}
     ></section>
