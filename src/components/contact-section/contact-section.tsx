@@ -125,15 +125,9 @@ export default function ContactSection() {
               <p>Something went wrong. Please try again...</p>
             )}
 
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                padding: "2rem 1rem 1rem 2rem",
-              }}
-            >
+            <div className="rc-container">
               <ReCAPTCHA
+                className="rc"
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 onChange={(token: string | null) => {
                   if (token !== null) setToken(token);

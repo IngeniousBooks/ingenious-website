@@ -55,6 +55,7 @@
 }
 
 .contact-section {
+  overflow: scroll;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -75,7 +76,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 40%;
+  min-width: 50%;
+  max-width: 100%;
   margin-top: 3rem;
   padding: 1rem 2rem;
   background-color: var(--l-cream);
@@ -99,7 +101,6 @@
 label,
 input,
 textarea {
-  padding-left: 5px;
   min-width: 100%;
   display: block;
   align-items: center;
@@ -165,6 +166,9 @@ button:hover {
   transition: box-shadow 0.4s ease-in-out;
   cursor: pointer;
 }
+form {
+  width: 80%;
+}
 
 @media (max-width: 768px) {
   html {
@@ -180,5 +184,19 @@ button:hover {
 @media (max-width: 480px) {
   html {
     font-size: 10px;
+  }
+  form {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  input#contact-name,
+  input#email,
+  input#message,
+  .rc-container,
+  label {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
 }
