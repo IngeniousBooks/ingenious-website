@@ -79,15 +79,13 @@
 
 @media (max-width: 1000px) {
   .squiggle-title {
-    margin-top: -50%;
-    margin-bottom: -50;
+    margin-top: -40%;
+    margin-bottom: -40%;
   }
   .what-we-can-do-intro {
     font-size: 2rem;
   }
-  .what-we-can-do-list {
-    margin-left: 0;
-    padding-left: 0;
+  .what-we-can-do-text {
     ul {
       display: flex;
       flex-direction: column;
@@ -126,21 +124,40 @@
 }
 
 @media (max-width: 546px) {
-  .what-we-can-do-list {
-    ul,
-    li {
+  .squiggle-title {
+    margin-top: -60%;
+    margin-bottom: -50%;
+  }
+  .what-we-can-do-text {
+    ul {
       width: 100%;
+
+      li {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        margin-bottom: 2rem;
+        padding: 0;
+        img {
+          margin: 0;
+          transform: scale(0.6);
+        }
+      }
+      h3 {
+        text-align: center;
+        padding: 2rem 0;
+        margin-left: 0;
+      }
     }
-    li {
-      display: flex;
-      flex-direction: column;
-      margin: 0;
-      margin-bottom: 2rem;
-      padding: 0;
-    }
-    h3 {
-      padding: 2rem 0;
-      margin-left: 0;
-    }
+  }
+}
+
+@media (max-width: 346px) {
+  .squiggle-title {
+    margin-top: -85%;
+    margin-bottom: -80%;
   }
 }
