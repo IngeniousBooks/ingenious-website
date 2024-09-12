@@ -38,6 +38,12 @@
   max-width: 28%;
 }
 
+.collaboration-panel {
+  .collaboration-imagery {
+    justify-content: flex-end;
+  }
+}
+
 .collaboration-panel,
 .odd {
   padding: 4rem;
@@ -84,6 +90,7 @@
 }
 
 .collaboration-panel-bottom-squiggle,
+.collaboration-panel-middle-squiggle,
 .collaboration-panel-top-squiggle {
   z-index: 1;
   margin-top: -15rem;
@@ -112,4 +119,55 @@
   top: 50%;
   left: 0;
   z-index: 3;
+}
+
+@media (max-width: 1000px) {
+  .collaboration-imagery {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+  .collaboration-imagery__logo {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 670px) {
+  .collaboration-imagery__logo {
+    transform: scale(0.6);
+  }
+  .the-ingenious-way-steps {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .the-ingenious-way-trio-image {
+    margin: 1rem;
+  }
+  .the-ingenious-way-step-panel {
+    h3 {
+      padding: 0;
+      margin-top: 0;
+    }
+    min-width: 80%;
+    padding: 2rem;
+    border: 2px solid var(--brand-orange);
+    border-radius: 5px;
+    margin: 2rem 1rem;
+  }
+  .collaboration-panel,
+  .odd {
+    flex-direction: column;
+    margin: 3rem 0 0 0;
+  }
+  .collaboration-text {
+    max-width: 80%;
+  }
+
+  .collaboration-panel-bottom-squiggle,
+  .collaboration-panel-top-squiggle,
+  .collaboration-panel-middle-squiggle {
+    margin-top: -20rem;
+    margin-bottom: -20rem;
+  }
 }

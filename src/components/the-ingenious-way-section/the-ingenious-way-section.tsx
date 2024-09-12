@@ -42,13 +42,13 @@ export default function TheIngeniousWaySection() {
         logoLink={toby.logoLink}
         isOddPanel={true}
       />
-      <div>
-        <SquiggleDivider
-          topColour={houseColours["--l-cream"]}
-          bottomColour={houseColours["--white"]}
-          className={styles["collaboration-panel-top-squiggle"]}
-        />
-      </div>
+
+      <SquiggleDivider
+        topColour={houseColours["--l-cream"]}
+        bottomColour={houseColours["--white"]}
+        className={styles["collaboration-panel-middle-squiggle"]}
+      />
+
       <CollaborationPanel
         quote={bryna.quote}
         clientName={bryna.clientName}
