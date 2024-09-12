@@ -62,3 +62,18 @@
   font-size: 1.6rem;
   padding-bottom: 2rem;
 }
+
+@media (max-width: 550px) {
+  .faq-list--open {
+    padding: 0;
+  }
+  .faq-list-item {
+    padding: 0.8rem;
+  }
+  .faq-dropdown-container {
+    width: 95%;
+  }
+  .faq-container-footer {
+    transform: scale(0.6);
+  }
+}
