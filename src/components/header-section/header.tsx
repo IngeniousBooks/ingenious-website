@@ -10,7 +10,7 @@ export default function Header() {
 
   const controlNavbar = () => {
     const currentScrollY = window.scrollY;
-    const SHOW_THRESHOLD = 40;
+    const SHOW_THRESHOLD = 30;
     const JUMP_THRESHHOLD = 200;
 
     const isLargeJump =
@@ -45,7 +45,7 @@ export default function Header() {
       <Link to="/">{<Logo colour={"black"} sizeMultiplier={1} />}</Link>
       <VerticalLine />
       <NavLinks />
-      <section>
+      <section className={styles["header-contact"]}>
         <Link smooth to="/#contact">
           <button className="header-button">book a meeting</button>
         </Link>

@@ -27,6 +27,7 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
+    errorElement: <ErrorPage />,
   },
   {
     path: "/contact",
@@ -37,6 +38,7 @@ const router = createBrowserRouter([
         <Footer />
       </>
     ),
+    errorElement: <ErrorPage />,
   },
 ]);
 

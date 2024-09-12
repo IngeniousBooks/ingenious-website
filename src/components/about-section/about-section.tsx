@@ -2,12 +2,14 @@ import { houseColours } from "../../data/house-style";
 import IngeniousIcon from "../ui/icon";
 import SquiggleDivider from "../ui/squiggle-divider";
 import styles from "./about-section.module.css";
+import ContactSection from "../contact-section/contact-section";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function AboutSection() {
   return (
     <>
       <section className={styles["about-section"]}>
-        <div className={styles["about-hero"]}>
+        <div id="about" className={styles["about-hero"]}>
           <h2>
             <span className="slim-heading">About</span>{" "}
             <span className="heavy-heading">Us</span>
@@ -50,7 +52,9 @@ export default function AboutSection() {
             hiring a team of publishing experts to help your independent press
             to thrive, book a meeting with us today!
           </p>
-          <button>Book a Meeting</button>
+          <Link to="#about-contact">
+            <button>Book a Meeting</button>
+          </Link>
         </div>
         <SquiggleDivider
           topColour={houseColours["--l-cream"]}
@@ -65,6 +69,9 @@ export default function AboutSection() {
           />
         </div>
       </section>
+      <div id="about-contact">
+        <ContactSection />
+      </div>
     </>
   );
 }

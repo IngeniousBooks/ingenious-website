@@ -21,7 +21,7 @@ export default function PricingPanel({
       )}
       <h3 className="brand">{serviceName}</h3>
       <p>from</p>
-      <p>£{price}</p>
+      <p>{price}</p>
     </article>
   );
 }

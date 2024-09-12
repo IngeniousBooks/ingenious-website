@@ -10,6 +10,7 @@ import TheIngeniousWaySection from "../components/the-ingenious-way-section/the-
 import WhatWeCanDoSection from "../components/what-we-can-do-section/what-we-can-do";
 import PricingSection from "../components/pricing-section/pricing-section";
 import FAQSection from "../components/faq-section/faq-section";
+import ContactSection from "../components/contact-section/contact-section";
 
 export default function Home() {
   return (
@@ -41,6 +42,7 @@ export default function Home() {
         altText="Ingenious logo in white against vibrant background with perceptible eye-catching books"
       />
       <FAQSection />
+      <ContactSection />
     </>
   );
 }

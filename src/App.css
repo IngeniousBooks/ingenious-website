@@ -149,3 +149,12 @@ textarea {
   color: var(--brand-orange);
   font-style: italic;
 }
+
+button:hover {
+  background-color: var(--l-cream);
+  color: var(--brand-orange);
+  box-shadow: 0 0 0 5px var(--brand-orange), inset 0 0 0 1px #fff;
+  transition: background-color 1s ease-in-out;
+  transition: box-shadow 0.4s ease-in-out;
+  cursor: pointer;
+}
