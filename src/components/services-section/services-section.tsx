@@ -14,6 +14,7 @@ export default function ServicesSection() {
             serviceName={serviceName}
             serviceDescription={serviceDescription}
             price={"null"}
+            key={serviceName}
           />
         ))}
       </div>

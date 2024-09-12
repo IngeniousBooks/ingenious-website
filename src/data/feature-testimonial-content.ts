@@ -46,6 +46,6 @@ export const featureTestimonialContent: {
       height: 315,
       embedId: "9Wz0vov5spQ?si=jnzOnQwm6MYjGhzi",
     },
-    logoIconLink: "public/assets/partner-logos/world-changers-media-logo.svg",
+    logoIconLink: "/assets/partner-logos/world-changers-media-logo.svg",
   },
 };

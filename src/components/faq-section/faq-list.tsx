@@ -17,6 +17,7 @@ export default function FAQList({
           response={response}
           currentItemCount={index + 1}
           totalItems={items.length}
+          key={question}
         />
       ))}
     </ul>

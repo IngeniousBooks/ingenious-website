@@ -19,7 +19,7 @@ export default function FAQItem({
       <h3 className={styles["faq-question"]}>{question}</h3>
       <div className={styles["faq-question-response"]}>
         {response.map((paragraph) => (
-          <p>{paragraph}</p>
+          <p key={paragraph}>{paragraph}</p>
         ))}
       </div>
       {currentItemCount < totalItems && (

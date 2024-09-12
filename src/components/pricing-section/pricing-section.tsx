@@ -23,6 +23,7 @@ export default function PricingSection() {
             iconURL={iconURL}
             serviceName={serviceName}
             price={price}
+            key={serviceName}
           />
         ))}
       </div>

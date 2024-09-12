@@ -29,6 +29,6 @@ export const collaborationContent: { [key: string]: CollaborationContent } = {
     clientName: "Mark Angelo Harrison",
     clientTitle: "Author of A Darker Electricity, Published by Velocity Press",
     imageLink: "/assets/partner-portraits/mark-angelo-harrison-portrait.png",
-    logoLink: "public/assets/partner-logos/Velocity_Press_Logo.svg",
+    logoLink: "/assets/partner-logos/Velocity_Press_Logo.svg",
   },
 };

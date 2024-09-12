@@ -36,7 +36,7 @@ export default function FeatureTestimonial({
           </p>
           <ul className={styles["feature-testimonial__text__list"]}>
             {list.items.map((item) => (
-              <li>{item}</li>
+              <li key={item}>{item}</li>
             ))}
           </ul>
         </div>

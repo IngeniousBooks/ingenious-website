@@ -12,6 +12,7 @@ export default function BenefitsSection() {
             iconURL={iconURL}
             benefitName={benefitName}
             benefitDescription={benefitDescription}
+            key={benefitName}
           />
         ))}
       </div>

@@ -15,7 +15,7 @@ export default function WhatWeCanDoSection() {
         </p>
         <ul className={styles["what-we-can-do-list"]}>
           {whatWeCanDo.map(({ title, text }) => (
-            <Service service={title} description={text} />
+            <Service service={title} description={text} key={title} />
           ))}
         </ul>
       </div>

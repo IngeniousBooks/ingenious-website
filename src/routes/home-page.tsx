@@ -19,7 +19,7 @@ export default function Home() {
       <SolutionsSection />
       <ServicesSection />
       <DividerImage
-        imageUrl="public/assets/divider-images/books-scattered-angle-with-spines.jpg"
+        imageUrl="/assets/divider-images/books-scattered-angle-with-spines.jpg"
         altText="Eleven vibrant books scattered across a white table, spines visible"
       />
       <BenefitsSection />
