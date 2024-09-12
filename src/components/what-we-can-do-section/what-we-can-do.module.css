@@ -78,12 +78,27 @@ li {
 }
 
 @media (max-width: 1000px) {
+  .squiggle-title {
+    margin-top: -50%;
+    margin-bottom: -50;
+  }
   .what-we-can-do-intro {
     font-size: 2rem;
   }
   .what-we-can-do-list {
+    margin-left: 0;
+    padding-left: 0;
     ul {
-      width: 95%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+    }
+    ul,
+    li {
+      max-width: 100%;
+      padding: 0;
     }
     li {
       h3 {
@@ -106,6 +121,26 @@ li {
         grid-area: check;
         padding: 0rem;
       }
+    }
+  }
+}
+
+@media (max-width: 546px) {
+  .what-we-can-do-list {
+    ul,
+    li {
+      width: 100%;
+    }
+    li {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 2rem;
+      padding: 0;
+    }
+    h3 {
+      padding: 2rem 0;
+      margin-left: 0;
     }
   }
 }
