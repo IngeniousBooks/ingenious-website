@@ -3,6 +3,7 @@ import { servicesContent } from "../../data/services-content";
 import PricingPanel from "./pricing-panel";
 import SquiggleDivider from "../ui/squiggle-divider";
 import { houseColours } from "../../data/house-style";
+import { HashLink as Link } from "react-router-hash-link";
 
 export default function PricingSection() {
   return (
@@ -49,7 +50,9 @@ export default function PricingSection() {
           A London-based indie book publisher specialising in electronic music
           and club culture non-fiction.
         </p>
-        <button>book a meeting</button>
+        <Link smooth to="#contact">
+          <button>book a meeting</button>
+        </Link>
       </div>
     </section>
   );

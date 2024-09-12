@@ -21,7 +21,7 @@ export default function HeroSection() {
         Exceptional editorial, design and book management services for
         independent publishers
       </p>
-      <Link smooth to="/#contact">
+      <Link smooth to="#contact">
         <button className={styles["hero-button"]}>book a meeting</button>
       </Link>
     </section>

@@ -52,7 +52,7 @@ export default function AboutSection() {
             hiring a team of publishing experts to help your independent press
             to thrive, book a meeting with us today!
           </p>
-          <Link to="#about-contact">
+          <Link to="#contact">
             <button>Book a Meeting</button>
           </Link>
         </div>
@@ -69,9 +69,7 @@ export default function AboutSection() {
           />
         </div>
       </section>
-      <div id="about-contact">
-        <ContactSection />
-      </div>
+      <ContactSection />
     </>
   );
 }

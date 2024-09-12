@@ -1,4 +1,5 @@
 import { servicesContent } from "../../data/services-content";
+import { HashLink as Link } from "react-router-hash-link";
 import ServicePanel from "./service-panel";
 import styles from "./services-section.module.css";
 
@@ -12,10 +13,13 @@ export default function ServicesSection() {
             iconURL={iconURL}
             serviceName={serviceName}
             serviceDescription={serviceDescription}
+            price={"null"}
           />
         ))}
       </div>
-      <button>book a meeting</button>
+      <Link smooth to="#contact">
+        <button>book a meeting</button>
+      </Link>
     </section>
   );
 }

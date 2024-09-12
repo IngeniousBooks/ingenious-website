@@ -12,7 +12,7 @@ export default function FAQDropDown() {
     setIsOpen(!isOpen);
     if (isOpen && headerRef.current) {
       headerRef.current.scrollIntoView({
-        behavior: "instant",
+        behavior: "smooth",
         block: "center",
       });
     }

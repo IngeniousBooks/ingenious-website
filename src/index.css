@@ -57,6 +57,10 @@ h3 {
   color: var(--brand-orange);
 }
 
+.light {
+  color: var(--l-cream);
+}
+
 button {
   background-color: var(--brand-orange);
   font-size: 1.5rem;

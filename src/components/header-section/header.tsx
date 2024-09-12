@@ -46,7 +46,7 @@ export default function Header() {
       <VerticalLine />
       <NavLinks />
       <section className={styles["header-contact"]}>
-        <Link smooth to="/#contact">
+        <Link smooth to="#contact">
           <button className="header-button">book a meeting</button>
         </Link>
         <p className="brand">team@ingenious-books.com</p>
