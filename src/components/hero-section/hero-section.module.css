@@ -24,10 +24,18 @@
   margin-bottom: 4rem;
 }
 
-@media (max-width: 1168px) {
-}
 @media (max-width: 626px) {
   .hero-logo {
     transform: scale(0.8);
+  }
+}
+@media (max-width: 480px) {
+  .hero-logo {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 380px) {
+  .hero-logo {
+    transform: scale(0.3);
   }
 }
