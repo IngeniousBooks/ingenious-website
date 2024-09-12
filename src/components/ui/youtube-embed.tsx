@@ -4,9 +4,10 @@ export default function YoutubeEmbed({
   width,
   height,
   embedId,
-}: MultimediaProperties) {
+  className,
+}: MultimediaProperties & { className: string }) {
   return (
-    <div className="video-responsive">
+    <div className={className || "video-responsive"}>
       <iframe
         width={width}
         height={height}
