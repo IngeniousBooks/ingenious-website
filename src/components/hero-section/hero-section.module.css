@@ -17,10 +17,6 @@
     margin-top: 0;
     text-align: center;
   }
-
-  button {
-    width: 20vw;
-  }
 }
 
 .hero-image {
@@ -28,12 +24,10 @@
   margin-bottom: 4rem;
 }
 
-.hero-button:hover {
-  background-color: var(--l-cream);
-  color: var(--brand-orange);
-  box-shadow: 0 0 0 5px var(--brand-orange), inset 0 0 0 1px #fff;
-  transition: background-color 1s ease-in-out;
-  transition: box-shadow 0.4s ease-in-out;
-  cursor: pointer;
-  margin-bottom: 0;
+@media (max-width: 1168px) {
+}
+@media (max-width: 626px) {
+  .hero-logo {
+    transform: scale(0.8);
+  }
 }

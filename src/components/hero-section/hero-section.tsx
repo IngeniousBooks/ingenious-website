@@ -11,7 +11,9 @@ export default function HeroSection() {
         srcSet="/assets/hero-books/hero-books@0.5x.jpg 500w, /assets/hero-books/hero-books.jpg 1200w, /assets/hero-books/hero-books@2x.jpg 2000w"
         alt="a colourful collection of beautiful books"
       />
-      <Logo colour={"black"} sizeMultiplier={2} />
+      <div className={styles["hero-logo"]}>
+        <Logo colour={"black"} sizeMultiplier={2} />
+      </div>
       <h2>
         <span className="heavy-heading upper brand">Beautiful Books,</span>
         <span className="mid-heading upper brand"> Happy Authors,</span>
