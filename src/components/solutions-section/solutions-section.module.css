@@ -61,6 +61,7 @@
 
 #conclusion {
   grid-area: conclusion;
+  margin-bottom: 1rem;
 }
 
 .image-wrapper {
