@@ -9,11 +9,11 @@ export default function ParsedTextContent({
 }: ParsedTextContentProps) {
   const paragraphs = textContent.split("\r");
   return (
-    <div className={className}>
+    <>
       {paragraphs.map((paragraph) => {
         const textSections = paragraph.split(/(\*\*.*?\*\*)/);
         return (
-          <p key={paragraph.substring(0, 16)}>
+          <p className={className} key={paragraph.substring(0, 16)}>
             {textSections.map((text) => {
               if (text.startsWith("**") && text.endsWith("**")) {
                 return <strong key={text}>{text.slice(2, -2)}</strong>;
@@ -23,6 +23,6 @@ export default function ParsedTextContent({
           </p>
         );
       })}
-    </div>
+    </>
   );
 }
