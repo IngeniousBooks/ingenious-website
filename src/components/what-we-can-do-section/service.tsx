@@ -12,10 +12,8 @@ export default function Service({
         src="/assets/icons/ingenious-tick-icon.svg"
         alt="check or tick icon"
       />
-      <div className={styles["service-text"]}>
-        <h3 className="brand">{service}</h3>
-        <p className={styles["service-description"]}>{description}</p>
-      </div>
+      <h3 className="brand">{service}</h3>
+      <p className={styles["service-description"]}>{description}</p>
     </li>
   );
 }

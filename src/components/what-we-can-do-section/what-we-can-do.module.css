@@ -1,21 +1,30 @@
 .what-we-can-do-section {
   position: relative;
+  overflow: hidden;
   background-color: var(--l-cream);
 
   h2 {
+    z-index: 2;
+    position: relative;
     margin-top: 0;
-
-    padding: 8rem 5rem;
     color: var(--white);
-    background-image: url(/assets/orange-squiggle-panel.svg);
-    background-size: cover;
-    background-position: center 30%;
     text-align: center;
+    background-color: var(--brand-orange);
+    padding: 2rem;
   }
 }
 
+.squiggle-title {
+  z-index: 1;
+  margin-top: -20rem;
+  margin-bottom: -15rem;
+  margin-left: 0;
+  padding-left: 0;
+  min-width: 100%;
+}
+
 .what-we-can-do-text {
-  padding: 1rem 10rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -28,23 +37,75 @@
   margin-top: 0;
 }
 
-.what-we-can-do-list {
-  li {
-    margin-left: 2rem;
-    width: 90%;
-    display: flex;
-    justify-content: flex-start;
-    img {
-      padding: 4rem;
-    }
-    h3 {
-      font-size: 3rem;
-      margin-bottom: 0;
-    }
+ul {
+  width: 80%;
+}
+
+li {
+  max-width: 80%;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 0.3fr 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  grid-template-areas:
+    "check title title"
+    "check text text"
+    ". text text";
+  img {
+    grid-area: check;
+    padding: 1rem;
+    margin-left: 3rem;
+    margin-right: 0;
+    max-width: 70%;
+  }
+  h3 {
+    margin: 0;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    grid-area: title;
+  }
+  p {
+    grid-area: text;
   }
 }
 
 .service-description {
   font-size: 2rem;
   margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .what-we-can-do-intro {
+    font-size: 2rem;
+  }
+  .what-we-can-do-list {
+    ul {
+      width: 95%;
+    }
+    li {
+      h3 {
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+      }
+      padding: 2.2rem;
+      border: 2px solid var(--brand-orange);
+      border-radius: 5px;
+      display: grid;
+      grid-template-columns: 0.8fr 1fr 1fr;
+      grid-template-rows: 0.2fr 1fr;
+      grid-template-areas:
+        "check title title"
+        "text text text";
+      img {
+        margin-left: 2rem;
+        margin-top: 1rem;
+        max-width: 6rem;
+        grid-area: check;
+        padding: 0rem;
+      }
+    }
+  }
 }
