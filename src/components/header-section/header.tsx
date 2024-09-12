@@ -42,12 +42,16 @@ export default function Header() {
       id="header"
       className={`${styles["header"]} ${show ? "" : "hidden"}`}
     >
-      <Link to="/">{<Logo colour={"black"} sizeMultiplier={1} />}</Link>
+      <Link smooth to="/">
+        <div className={styles["logo-link"]}>
+          <Logo colour={"black"} sizeMultiplier={1} />
+        </div>
+      </Link>
       <VerticalLine />
       <NavLinks />
       <section className={styles["header-contact"]}>
         <Link smooth to="#contact">
-          <button className="header-button">book a meeting</button>
+          <button className={styles["header-button"]}>book a meeting</button>
         </Link>
         <p className="brand">team@ingenious-books.com</p>
         <p className="brand">07822 014130</p>
