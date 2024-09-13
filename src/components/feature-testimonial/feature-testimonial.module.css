@@ -1,0 +1,161 @@
+.feature-testimonial-section {
+  background-color: var(--l-cream);
+  overflow: hidden;
+  h2 {
+    padding: 2rem;
+    margin-top: 0;
+    color: var(--white);
+    background-color: var(--brand-orange);
+    text-align: center;
+    z-index: 3;
+    position: relative;
+  }
+
+  h3 {
+    padding: 2rem 4rem 0 4rem;
+    text-align: center;
+    margin: 0;
+    z-index: 3;
+  }
+
+  p {
+    font-size: 1.3rem;
+    font-weight: 200;
+  }
+  li::marker {
+    color: var(--brand-orange);
+  }
+}
+
+.feature-squiggle {
+  z-index: 0;
+  margin-top: -30rem;
+  margin-bottom: -15rem;
+  margin-left: 0;
+  padding-left: 0;
+  min-width: 100%;
+}
+
+.feature-testimonial {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 0.5fr 0.5fr 1fr;
+  grid-template-areas: "text media" "text media" "list media";
+  z-index: 2;
+}
+
+.feature-testimonial__text__body,
+.feature-testimonial__list-intro {
+  padding: 0 3rem;
+  span {
+    color: var(--d-grey);
+    font-weight: 300;
+  }
+  position: relative;
+  z-index: 2;
+}
+
+.feature-testimonial__text {
+  grid-area: text;
+}
+
+.feature-testimonial__text__list {
+  padding-left: 5rem;
+  li {
+    font-size: 1.3rem;
+    font-weight: 200;
+    padding-top: 0.2rem;
+  }
+}
+
+.feature-testimonial-achievements {
+  grid-area: list;
+}
+
+.feature-testimonial__media {
+  grid-area: media;
+}
+
+.feature-testimonial-icon {
+  position: absolute;
+  bottom: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.feature-testimonial__partner-logo {
+  margin: 1rem;
+}
+
+@media (max-width: 1150px) {
+  .feature-testimonial {
+    grid-template-columns: 1fr 0.75fr;
+    grid-template-rows: 1fr 0.5fr;
+    grid-template-areas:
+      "text media"
+      "list list";
+  }
+  .feature-testimonial__partner-logo {
+    transform: scale(0.6);
+  }
+  .feature-testimonial__text,
+  .feature-testimonial-achievements {
+    font-size: 1.2rem;
+
+    li {
+      font-size: 1.4rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .feature-squiggle {
+    margin-top: -25rem;
+    margin-bottom: -20rem;
+    margin-left: 0;
+    padding-left: 0;
+    min-width: 100%;
+  }
+  .feature-testimonial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .feature-testimonial__text,
+  .feature-testimonial-achievements {
+    p {
+      font-size: 1.6rem;
+    }
+    li {
+      font-size: 1.5rem;
+    }
+  }
+  .feature-testimonial__partner-logo {
+    transform: scale(0.6);
+  }
+  .feature-testimonial__media {
+    min-width: 85%;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .feature-squiggle {
+    margin-top: -30rem;
+    margin-bottom: -23rem;
+  }
+}
+@media (max-width: 260px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  .feature-testimonial__partner-logo {
+    transform: scale(0.3);
+  }
+}

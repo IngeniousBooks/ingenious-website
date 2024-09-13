@@ -13,6 +13,7 @@
   color: #484848;
   box-sizing: border-box;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,19 +30,35 @@ h1 {
 }
 
 h2 {
-  font-size: 2.6rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 
-button {
-  background-color: var(--brand-orange);
-  font-size: 1.5rem;
+h3 {
+  font-size: 2rem;
   font-weight: 700;
-  color: var(--white);
+}
+
+.heavy-heading {
+  font-weight: 800;
+}
+.mid-heading {
+  font-weight: 400;
+}
+.slim-heading {
+  font-weight: 200;
+}
+
+.upper {
   text-transform: uppercase;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  border: none;
+}
+
+.brand {
+  color: var(--brand-orange);
+}
+
+.light {
+  color: var(--l-cream);
 }
 
 Sofia Pro Regular italic {

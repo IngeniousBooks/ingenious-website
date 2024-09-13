@@ -1,0 +1,41 @@
+.hero-section {
+  display: flex;
+  padding: 0 4rem;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-top: 0;
+    text-align: center;
+  }
+}
+
+.hero-image {
+  width: 95%;
+  margin-bottom: 4rem;
+}
+
+@media (max-width: 626px) {
+  .hero-logo {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 480px) {
+  .hero-logo {
+    transform: scale(0.6);
+  }
+}
+@media (max-width: 380px) {
+  .hero-logo {
+    transform: scale(0.3);
+  }
+}

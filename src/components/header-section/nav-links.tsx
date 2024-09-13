@@ -1,19 +1,17 @@
 import { HashLink as Link } from "react-router-hash-link";
+import styles from "./header.module.css";
 
 export default function NavLinks() {
   return (
-    <ul className="nav-list">
+    <ul className={styles["nav-list"]}>
       <Link to="/about">
-        <li>about</li>
+        <li className={styles["link"]}>about</li>
       </Link>
       <Link smooth to="/#services">
-        <li>services</li>
+        <li className={styles["link"]}>services</li>
       </Link>
-      <Link smooth to="/#testimonials">
-        <li>testimonials</li>
-      </Link>
-      <Link smooth to="/#contact">
-        <li>contact</li>
+      <Link smooth to="/#pricing">
+        <li className={styles["link"]}>pricing</li>
       </Link>
     </ul>
   );

@@ -71,7 +71,10 @@ export default function ContactSection() {
 
   return (
     <section className="contact-section">
-      <h2 id="contact">Let's discuss your next project</h2>
+      <h2 id="contact">Let's discuss your project</h2>
+      <p className="light mid-heading">team@ingenious-books.com</p>
+      <p className="light mid-heading">07822 014130</p>
+
       <motion.div layout className="contact-form-renderer">
         {!hasSent && (
           <motion.form
@@ -122,15 +125,9 @@ export default function ContactSection() {
               <p>Something went wrong. Please try again...</p>
             )}
 
-            <div
-              style={{
-                width: "100%",
-                display: "flex",
-                justifyContent: "center",
-                padding: "2rem 1rem 1rem 2rem",
-              }}
-            >
+            <div className="rc-container">
               <ReCAPTCHA
+                className="rc"
                 sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                 onChange={(token: string | null) => {
                   if (token !== null) setToken(token);
