@@ -71,3 +71,28 @@
   padding-left: 0;
   min-width: 100%;
 }
+
+@media (max-width: 800px) {
+  .about-hero {
+    img {
+      transform: scale(0.6);
+    }
+  }
+  .about-the-team {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    img {
+      transform: scale(0.6) translateX(-20%);
+    }
+  }
+  .about-the-team {
+    max-width: 95%;
+  }
+  .about-info {
+    padding: 0 1rem;
+  }
+}

@@ -14,7 +14,10 @@ export default function AboutSection() {
             <span className="slim-heading">About</span>{" "}
             <span className="heavy-heading">Us</span>
           </h2>
-          <img src="/assets/hero-books/stack-of-books.jpg" alt="" />
+          <img
+            src="/assets/hero-books/stack-of-books.jpg"
+            alt="stack of vibrant books"
+          />
         </div>
         <div className={styles["about-info"]}>
           <p className={styles["our-belief"]}>

@@ -71,6 +71,10 @@
   }
 }
 
+#contact {
+  text-align: center;
+}
+
 .contact-form-renderer {
   display: flex;
   flex-direction: column;

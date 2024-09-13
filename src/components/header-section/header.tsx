@@ -42,7 +42,7 @@ export default function Header() {
       id="header"
       className={`${styles["header"]} ${show ? "" : "hidden"}`}
     >
-      <Link smooth to="/">
+      <Link smooth to="/home">
         <div className={styles["logo-link"]}>
           <Logo colour={"black"} sizeMultiplier={1} />
         </div>

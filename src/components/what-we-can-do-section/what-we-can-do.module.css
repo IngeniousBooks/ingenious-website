@@ -78,10 +78,6 @@
 }
 
 @media (max-width: 1000px) {
-  .squiggle-title {
-    margin-top: -40%;
-    margin-bottom: -40%;
-  }
   .what-we-can-do-intro {
     font-size: 2rem;
   }

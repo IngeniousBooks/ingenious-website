@@ -13,9 +13,10 @@ interface WrapperProps {
 
 function Wrapper({ children }: WrapperProps) {
   const location = useLocation();
+  const behaviour = location.pathname.includes("/") ? "smooth" : "instant";
 
   useLayoutEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, left: 0, behavior: behaviour });
   }, [location.pathname]);
 
   return children;
@@ -26,9 +27,24 @@ const router = createBrowserRouter([
     path: "/",
     element: (
       <>
-        <Header />
-        <Home />
-        <Footer />
+        <Wrapper>
+          <Header />
+          <Home />
+          <Footer />
+        </Wrapper>
+      </>
+    ),
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/home",
+    element: (
+      <>
+        <Wrapper>
+          <Header />
+          <Home />
+          <Footer />
+        </Wrapper>
       </>
     ),
     errorElement: <ErrorPage />,
@@ -37,11 +53,11 @@ const router = createBrowserRouter([
     path: "/about",
     element: (
       <>
-        <Header />
         <Wrapper>
+          <Header />
           <AboutSection />
+          <Footer />
         </Wrapper>
-        <Footer />
       </>
     ),
     errorElement: <ErrorPage />,
