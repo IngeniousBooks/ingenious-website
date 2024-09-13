@@ -37,10 +37,6 @@ export default function Home() {
       />
       <CallToAction ctaText="Ready to get started?" />
       <PricingSection />
-      <DividerImage
-        imageUrl="/assets/divider-images/ingenious-colour-filter.jpg"
-        altText="Ingenious logo in white against vibrant background with perceptible eye-catching books"
-      />
       <FAQSection />
       <ContactSection />
     </>

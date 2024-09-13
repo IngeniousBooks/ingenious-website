@@ -55,6 +55,11 @@ export default function PricingSection() {
           <button>book a meeting</button>
         </Link>
       </div>
+      <img
+        className={styles["ingenious-filter"]}
+        src="/assets/divider-images/ingenious-colour-filter.jpg"
+        alt="Ingenious logo in white against vibrant background with perceptible eye-catching books"
+      />
     </section>
   );
 }

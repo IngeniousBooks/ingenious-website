@@ -83,6 +83,10 @@
   }
 }
 
+.ingenious-filter {
+  width: 100%;
+}
+
 @media (max-width: 800px) {
   .service-pricing-wrapper {
     flex-direction: column;
