@@ -9,7 +9,7 @@ export const benefitsContent: Array<BenefitContent> = [
     iconURL: "/assets/icons/ingenious-book-icon.svg",
     benefitName: "Beautiful Books",
     benefitDescription:
-      "Create visually appealing and error-free books with our experienceds and imaginative team, so you can build passionate reading audiences, impress the judges, and boost sales.",
+      "Create visually appealing and error-free books with our experienced and imaginative team, so you can build passionate reading audiences, impress the judges, and boost sales.",
   },
   {
     iconURL: "/assets/icons/ingenious-happy-icon.svg",

@@ -73,7 +73,7 @@ export default function ContactSection() {
     <section className="contact-section">
       <h2 id="contact">Let's discuss your project</h2>
       <p className="light mid-heading">team@ingenious-books.com</p>
-      <p className="light mid-heading">07822 014130</p>
+      <p className="light mid-heading">(+44) 07822 014130</p>
 
       <motion.div layout className="contact-form-renderer">
         {!hasSent && (

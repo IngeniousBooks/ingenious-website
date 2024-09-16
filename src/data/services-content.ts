@@ -10,7 +10,7 @@ export const servicesContent: Array<ServicesContent> = [
     iconURL: "/assets/icons/ingenious-editorial-icon.svg",
     serviceName: "Editorial",
     serviceDescription:
-      "We work meticulously to ensure your text is error-free, aligns with the author's vision and resonates with their audience, bringing clarity, coherence, and polish to your publications.",
+      "We work meticulously to ensure your text is error-free, aligns with the author's vision, and resonates with your reading audience, bringing clarity, coherence, and polish to your publications.",
     price: "£500 ($650)",
   },
   {

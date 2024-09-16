@@ -8,10 +8,10 @@ export interface SolutionContent {
 export const solutionsContent: Array<SolutionContent> = [
   {
     heading:
-      "Are you ready to free up resources, publish with confidence and navigate the future?",
-    bodyText: `We believe that independent publishers are the **spirit and soul of the book industry**.
+      "Are you ready to free up resources, publish with confidence and navigate the future with ease?",
+    bodyText: `We believe that independent publishers are the **spirit and soul of the book industry**. But they often work with **limited resources and tight budgets**.
     \r
-    But they often work with **limited resources and tight budgets**. They either **do ALL the work themselves** – commissioning, editorial, design, marketing, and coordinating the publishing schedule, among many other tasks – **or hire and manage multiple freelance contractors** of varying cost and reliability.
+    They either **do ALL the work themselves** – commissioning, editorial, design, marketing, and coordinating the publishing schedule, among many other tasks – **or hire and manage multiple freelancers** of varying cost and reliability.
     \r
     The truth is, **book publishing is a complex process** that requires specialist knowledge and skills. And with the pressure of financial risk in a rapidly changing industry, **it's a difficult decision to hire outside help**.
     \r

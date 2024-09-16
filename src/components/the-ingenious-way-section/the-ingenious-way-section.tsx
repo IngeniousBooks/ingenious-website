@@ -18,7 +18,7 @@ export default function TheIngeniousWaySection() {
       <div className={styles["the-ingenious-way-steps"]}>
         <TheIngeniousWayPanel
           step="Meet"
-          stepDescription="We'll speak over Zoom to discuss your requirements, and you can have all your questions answered."
+          stepDescription="We'll speak over Zoom to discuss your requirements and answer all your questions."
         />
         <TheIngeniousWayPanel
           step="Collaborate"
@@ -26,7 +26,7 @@ export default function TheIngeniousWaySection() {
         />
         <TheIngeniousWayPanel
           step="Celebrate"
-          stepDescription="You'll celebrate publishing success with your author!"
+          stepDescription="You'll celebrate publishing success with your author and publishing team!"
         />
       </div>
       <SquiggleDivider

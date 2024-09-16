@@ -26,12 +26,12 @@ export const featureTestimonialContent: {
     title: "We Help Indie Publishers Win Awards and Launch Bestsellers",
     fullName: "Bryna Haynes",
     intro:
-      "is the CEO and Founder of World Changers Media, a US-based independent publisher committed to delivering superior-quality transformational nonfiction by, and for, the next generation of thought leaders.",
-    bodyText: `A new publisher with a **busy schedule** — and, in her words, 'draconian' standards — Bryna required **cost-effective, reliable, and professional services** for managing the pre-press process.
+      "is the CEO and Founder of World Changers Media, a US-based independent publisher committed to delivering superior-quality transformational non-fiction by, and for, the next generation of thought leaders.",
+    bodyText: `A new publisher with a **busy schedule** — and, in her words, "draconian" standards — Bryna required **cost-effective, reliable, and professional services** for managing the pre-press process.
       \r 
-      That’s why she connected with Ingenious, and since 2022, **we’ve collaborated together on over 25 books**.
+      That’s why she connected with Ingenious, and since 2022, **we’ve collaborated on over twenty-five books**.
       \r
-      From raw manuscript to final print-ready and digital files, we provided book management, copyediting, proofreading, page design, typesetting and eBook services, allowing Bryna **to reclaim her time to operate in her zone of genius and serve her clients at the highest level**.`,
+      From raw manuscript to final print-ready and digital files, we provide book management, copy-editing, proofreading, page design, typesetting, and eBook services, allowing Bryna **to reclaim her time to operate in her zone of genius and serve her clients at the highest level**.`,
     list: {
       intro:
         "With our support, World Changers Media continues to go from strength to strength, achieving:",
