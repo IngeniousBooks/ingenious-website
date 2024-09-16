@@ -21,6 +21,6 @@ export const benefitsContent: Array<BenefitContent> = [
     iconURL: "/assets/icons/ingenious-roadmap-icon.svg",
     benefitName: "Peace of Mind",
     benefitDescription:
-      "You'll get a tailored roadmap, dedicated book manager and regular updates, so you can feel confident and in control of your busy publishing schedule.",
+      "You'll get a tailored roadmap, dedicated book manager, and regular updates, so you can feel confident and in control of your busy publishing schedule.",
   },
 ];
