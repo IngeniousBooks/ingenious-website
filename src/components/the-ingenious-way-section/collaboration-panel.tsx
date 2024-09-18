@@ -1,5 +1,6 @@
 import styles from "./the-ingenious-way-section.module.css";
 import { CollaborationContent } from "../../data/collaboration-content";
+import ParsedTextContent from "../../utils/parsed-text-content";
 
 type CollaborationPanelProps = CollaborationContent & { isOddPanel: boolean };
 
@@ -18,7 +19,14 @@ export default function CollaborationPanel({
       <div className={styles["collaboration-text"]}>
         <p className={styles["collaboration-quote"]}>{quote}</p>
         <p className={styles["collaboration-client-name"]}>{clientName}</p>
-        <p className={styles["collaboration-client-title"]}>{clientTitle}</p>
+
+        {clientTitle.map((ct) => (
+          <ParsedTextContent
+            key={ct}
+            textContent={ct}
+            className={styles["collaboration-client-title"]}
+          />
+        ))}
       </div>
       <div className={styles["collaboration-imagery"]}>
         <img

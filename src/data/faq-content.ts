@@ -15,7 +15,7 @@ export const faqContent: FAQContent[] = [
   {
     question: "I do all the work myself — do I need your services?",
     response: [
-      "We’ve worked with many indie publishers like you who commission, edit, design and market their books themselves, as well as manage the schedule and strategise for the future.",
+      "We’ve worked with many indie publishers like you who commission, edit, design, and market their books themselves, as well as manage the schedule and strategise for the future.",
       "It’s a heroic effort and we celebrate you! But wouldn’t your talents and skills be more effective elsewhere?",
       "With Ingenious you can maximise your resources to engage with the latest industry news, discover new authors, nurture current authors, commission your next bestseller, meet with agents, read the slush pile, produce innovative marketing strategies, connect with readers, arrange events, and plan for a dynamic future, to name just a few.",
     ],
@@ -23,7 +23,7 @@ export const faqContent: FAQContent[] = [
   {
     question: "I’m not sure I have the budget for outside help",
     response: [
-      "We know that indie publishers grapple with tight finances and high risks in the modern publishing industry, but we believe our cost-effective rates, exceptional quality of work and personal service is worth its weight in gold in the long run.",
+      "We know that indie publishers grapple with tight finances and high risks in the modern publishing industry, but we believe our cost-effective rates, exceptional quality of work, and personal service is worth its weight in gold in the long run.",
       "We also offer flexible payment plans, so you can spread the cost.",
     ],
   },
