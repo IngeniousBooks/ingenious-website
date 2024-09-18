@@ -10,11 +10,10 @@ export default function PricingSection() {
     <section id="pricing" className={styles["pricing-section"]}>
       <h2>Pricing</h2>
       <p className={styles["pricing-intro"]}>
-        Of course, every project is unique, and prices vary according to the
-        combination of time pressure, project complexity and the number of
-        services required. Here are estimated costs for a 50K word fiction
-        paperback requiring proofreading, page design and typesetting, and our
-        signature author care.
+        Of course, every book is unique, and prices vary according to its
+        complexity and the number of services required. Here are estimated costs
+        for a 50K word fiction paperback requiring proofreading, page design and
+        typesetting, and our signature author care.
       </p>
       <p className={styles["pricing-intro"]}></p>
       <div className={styles["service-pricing-wrapper"]}>

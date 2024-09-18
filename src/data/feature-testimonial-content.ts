@@ -37,7 +37,7 @@ export const featureTestimonialContent: {
         "With our support, World Changers Media continues to go from strength to strength, achieving:",
       items: [
         "An over 70% win rate for authors in major indie book award competitions",
-        "Wall Street Journal and USA Today bestselling authors",
+        "__Wall Street Journal__ and __USA Today__ bestselling authors",
         "Sustained publishing success",
       ],
     },

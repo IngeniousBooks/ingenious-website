@@ -13,12 +13,26 @@ export default function ParsedTextContent({
       {paragraphs.map((paragraph) => {
         const textSections = paragraph.split(/(\*\*.*?\*\*)/);
         return (
-          <p className={className} key={paragraph.substring(0, 16)}>
+          <p className={className} key={paragraph.substring(0, 12)}>
             {textSections.map((text) => {
-              if (text.startsWith("**") && text.endsWith("**")) {
-                return <strong key={text}>{text.slice(2, -2)}</strong>;
-              }
-              return text;
+              const italicSplit = text.split(/(__.*?__)/);
+              return italicSplit.map((t) => {
+                if (t.startsWith("**") && t.endsWith("**")) {
+                  return (
+                    <span className="bold" key={t}>
+                      {t.slice(2, -2)}
+                    </span>
+                  );
+                }
+                if (t.startsWith("__") && t.endsWith("__")) {
+                  return (
+                    <span key={t} className="italic">
+                      {t.slice(2, -2)}
+                    </span>
+                  );
+                }
+                return t;
+              });
             })}
           </p>
         );

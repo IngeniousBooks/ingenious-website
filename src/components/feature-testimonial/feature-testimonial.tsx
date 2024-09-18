@@ -43,7 +43,9 @@ export default function FeatureTestimonial({
           </p>
           <ul className={styles["feature-testimonial__text__list"]}>
             {list.items.map((item) => (
-              <li key={item}>{item}</li>
+              <li key={item}>
+                <ParsedTextContent textContent={item} className="" />
+              </li>
             ))}
           </ul>
         </div>
