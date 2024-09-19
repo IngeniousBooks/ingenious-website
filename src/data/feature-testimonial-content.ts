@@ -6,6 +6,7 @@ export interface FeatureTestimonialContent {
   list: ListProperties;
   multimediaProperties: MultimediaProperties;
   logoIconLink: string;
+  logoIconAltText: string;
 }
 
 export interface MultimediaProperties {
@@ -47,5 +48,6 @@ export const featureTestimonialContent: {
       embedId: "9Wz0vov5spQ?si=jnzOnQwm6MYjGhzi",
     },
     logoIconLink: "/assets/partner-logos/world-changers-media-logo.svg",
+    logoIconAltText: "World Changers Media Logo",
   },
 };

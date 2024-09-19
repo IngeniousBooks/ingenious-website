@@ -15,6 +15,7 @@ export default function FeatureTestimonial({
     list,
     multimediaProperties,
     logoIconLink,
+    logoIconAltText,
   },
 }: {
   props: FeatureTestimonialContent;
@@ -58,6 +59,7 @@ export default function FeatureTestimonial({
           />
           <img
             src={logoIconLink}
+            alt={logoIconAltText}
             className={styles["feature-testimonial__partner-logo"]}
           />
         </div>
