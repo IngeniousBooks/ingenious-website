@@ -8,15 +8,18 @@ export default function ServicesSection() {
     <section id="services" className={styles["services-section"]}>
       <h2>Our Services</h2>
       <div className={styles["services-wrapper"]}>
-        {servicesContent.map(({ iconURL, serviceName, serviceDescription }) => (
-          <ServicePanel
-            iconURL={iconURL}
-            serviceName={serviceName}
-            serviceDescription={serviceDescription}
-            price={"null"}
-            key={serviceName}
-          />
-        ))}
+        {servicesContent.map(
+          ({ iconURL, serviceName, serviceDescription, summaryList }) => (
+            <ServicePanel
+              iconURL={iconURL}
+              serviceName={serviceName}
+              serviceDescription={serviceDescription}
+              price={"null"}
+              summaryList={summaryList}
+              key={serviceName}
+            />
+          )
+        )}
       </div>
       <Link smooth to="#contact">
         <button>book a meeting</button>
