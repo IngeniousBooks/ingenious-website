@@ -27,10 +27,28 @@
 
 .service-panel {
   max-width: 32%;
-  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
   padding-bottom: 3rem;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  li {
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--white);
+    text-align: start;
+    padding: 0.2rem;
+  }
+  li::marker {
+    color: var(--brand-orange);
+  }
 
   button {
     margin: 2rem;
@@ -48,7 +66,8 @@
     padding: 2rem;
     max-width: 80%;
     margin-bottom: 2rem;
-    p {
+    p,
+    li {
       font-size: 2rem;
     }
   }

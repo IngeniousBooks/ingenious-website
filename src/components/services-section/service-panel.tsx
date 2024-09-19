@@ -6,6 +6,7 @@ export default function ServicePanel({
   iconURL,
   serviceName,
   serviceDescription,
+  summaryList,
 }: ServicesContent) {
   return (
     <article className={styles["service-panel"]}>
@@ -16,6 +17,11 @@ export default function ServicePanel({
       )}
       <h3>{serviceName}</h3>
       <p>{serviceDescription}</p>
+      <ul>
+        {summaryList.map((service) => (
+          <li key={service}>{service}</li>
+        ))}
+      </ul>
     </article>
   );
 }
