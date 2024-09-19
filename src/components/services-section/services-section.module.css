@@ -29,7 +29,7 @@
   max-width: 32%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   position: relative;
   padding-bottom: 3rem;
@@ -59,7 +59,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .service-panel {
     border: 2px solid var(--brand-orange);
     border-radius: 5px;
@@ -74,6 +74,7 @@
 
   .services-wrapper {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
