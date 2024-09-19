@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 export default function ContactSection() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [isInvalidSubmit, setIsInvalidSubmit] = useState(false);
+  const [invalidSubmitMessage, setInvalidSubmitMessage] = useState("");
   const [hasSent, setHasSent] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [token, setToken] = useState("");
@@ -15,6 +16,28 @@ export default function ContactSection() {
     window.scrollTo({ top: 0, behavior: "smooth" });
     setSearchParams([]);
     setHasSent(false);
+  };
+
+  const isValidEmail = (email: string | null): boolean => {
+    const validEmailRegex =
+      /^[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~](\.?[-!#$%&'*+/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
+    if (!email) return false;
+
+    const emailParts = email.split("@");
+
+    if (emailParts.length !== 2) return false;
+
+    const account = emailParts[0];
+    const domain = emailParts[1];
+
+    if (account.length > 64) return false;
+    else if (domain.length > 255) return false;
+
+    const domainParts = domain.split(".");
+
+    if (domainParts.some((part) => part.length > 63)) return false;
+
+    return validEmailRegex.test(email);
   };
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -27,6 +50,15 @@ export default function ContactSection() {
       message: searchParams.get("message"),
       "g-recaptcha-response": token,
     };
+
+    if (!isValidEmail(formData.email)) {
+      setInvalidSubmitMessage(
+        "Please check you've provided a valid email address"
+      );
+      setIsInvalidSubmit(true);
+      setIsLoading(false);
+      return;
+    }
     if (
       typeof formData.contactName === "string" &&
       typeof formData.email === "string" &&
@@ -42,11 +74,15 @@ export default function ContactSection() {
           setIsLoading(false);
           setHasSent(true);
         } else {
+          setInvalidSubmitMessage("Something went wrong. Please try again...");
           setIsInvalidSubmit(true);
           setIsLoading(false);
         }
       } catch {
+        setInvalidSubmitMessage("Something went wrong. Please try again...");
         setIsInvalidSubmit(true);
+        setIsLoading(false);
+      } finally {
         setIsLoading(false);
       }
     }
@@ -121,9 +157,7 @@ export default function ContactSection() {
                 disabled={isLoading}
               />
             </label>
-            {isInvalidSubmit && (
-              <p>Something went wrong. Please try again...</p>
-            )}
+            {isInvalidSubmit && <p>{invalidSubmitMessage}</p>}
 
             <div className="rc-container">
               <ReCAPTCHA
@@ -133,11 +167,11 @@ export default function ContactSection() {
                   if (token !== null) setToken(token);
                   setTimeout(() => {
                     setToken("");
-                  }, 85000);
+                  }, 86000);
                 }}
               />
             </div>
-            <button disabled={isLoading || hasSent} hidden={!token}>
+            <button disabled={isLoading || !token || hasSent}>
               {isLoading ? "Sending" : "Send"}
             </button>
           </motion.form>
