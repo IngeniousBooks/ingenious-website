@@ -8,7 +8,7 @@ export default function HeroSection() {
       <img
         className={styles["hero-image"]}
         src="/assets/hero-books/hero-books.jpg"
-        srcSet="/assets/hero-books/hero-books@0.5x.jpg 500w, /assets/hero-books/hero-books.jpg 1200w, /assets/hero-books/hero-books@2x.jpg 2000w"
+        srcSet="/assets/hero-books/hero-books@0.5x.jpg 500w, /assets/hero-books/hero-books.jpg 1200w"
         alt="a colourful collection of beautiful books"
       />
       <div className={styles["hero-logo"]}>
