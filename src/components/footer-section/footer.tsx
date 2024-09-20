@@ -20,7 +20,7 @@ export default function Footer() {
       <Link
         className={styles["privacy-link"]}
         target="_blank"
-        to="ingeniousprivacynoticeprofessionalservices.html"
+        to="/assets/ingenious-privacy-notice-professional-services.pdf"
       >
         privacy policy
       </Link>

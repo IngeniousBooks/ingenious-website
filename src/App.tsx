@@ -35,7 +35,7 @@ function App() {
         <a
           className="brand"
           target="_blank"
-          href="ingeniousprivacynoticeprofessionalservices.html"
+          href="/assets/ingenious-privacy-notice-professional-services.pdf"
         >
           privacy policy
         </a>
