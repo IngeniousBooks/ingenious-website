@@ -1,5 +1,6 @@
 import styles from "./footer.module.css";
 import { houseColours } from "../../data/house-style";
+import { HashLink as Link } from "react-router-hash-link";
 import SquigglyLine from "../ui/squiggly-line";
 import UpArrow from "../ui/up-arrow";
 export default function Footer() {
@@ -16,6 +17,13 @@ export default function Footer() {
         <SquigglyLine colour={houseColours["--brand-orange"]} />
       </div>
       <p className={styles["copyright"]}>&copy; Copyright 2024 Ingenious</p>
+      <Link
+        className={styles["privacy-link"]}
+        target="_blank"
+        to="ingeniousprivacynoticeprofessionalservices.html"
+      >
+        privacy policy
+      </Link>
     </footer>
   );
 }
