@@ -7,7 +7,7 @@ export default function ServicePanel({
   serviceName,
   serviceDescription,
   summaryList,
-}: ServicesContent) {
+}: Omit<ServicesContent, "pricingBreakdown">) {
   return (
     <article className={styles["service-panel"]}>
       {iconURL ? (
