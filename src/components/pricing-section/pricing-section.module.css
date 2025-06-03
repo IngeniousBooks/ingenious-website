@@ -24,11 +24,12 @@
 
 .pricing-intro {
   max-width: 75%;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
 }
 
 .service-pricing-wrapper {
+  margin-top: 3rem;
   min-width: 80%;
   display: flex;
   justify-content: space-around;
