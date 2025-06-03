@@ -17,14 +17,17 @@ export default function PricingSection() {
       </p>
       <p className={styles["pricing-intro"]}></p>
       <div className={styles["service-pricing-wrapper"]}>
-        {servicesContent.map(({ iconURL, serviceName, price }) => (
-          <PricingPanel
-            iconURL={iconURL}
-            serviceName={serviceName}
-            price={price}
-            key={serviceName}
-          />
-        ))}
+        {servicesContent.map(
+          ({ iconURL, serviceName, price, pricingBreakdown }) => (
+            <PricingPanel
+              iconURL={iconURL}
+              serviceName={serviceName}
+              price={price}
+              key={serviceName}
+              pricingBreakdown={pricingBreakdown}
+            />
+          )
+        )}
       </div>
       <SquiggleDivider
         topColour={houseColours["--white"]}

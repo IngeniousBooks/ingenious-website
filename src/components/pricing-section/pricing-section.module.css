@@ -44,6 +44,7 @@
   h3 {
     font-size: 2.5rem;
     height: 20%;
+    color: var(--brand-orange);
   }
   p {
     font-size: 2rem;
@@ -52,6 +53,41 @@
   align-items: center;
   position: relative;
   z-index: 3;
+}
+
+.service-name {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  height: fit-content;
+}
+
+.pricing-list {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+}
+.pricing-item {
+  font-size: 1.25rem;
+  text-align: start;
+  padding: 0.2rem 0;
+  margin: 0.2rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.pricing-item::before {
+  content: "•";
+  color: var(--brand-orange);
+  flex-shrink: 0;
+  margin-left: 2.5%;
+}
+
+.from {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-style: italic;
+  font-weight: 200;
 }
 
 .pricing-squiggle {
@@ -96,11 +132,30 @@
     border: 2px solid var(--brand-orange);
     border-radius: 5px;
     width: 70%;
-    padding: 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     img {
-      width: 80%;
+      width: 70%;
     }
+  }
+  .pricing-list {
+    padding: 0 2rem;
+    align-items: start;
+    justify-content: center;
+    margin-bottom: 0%;
+  }
+
+  .pricing-item {
+    gap: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .from {
+    margin: 0px;
+  }
+
+  .pricing-item::before {
+    margin-left: 0;
   }
 }
 
@@ -117,7 +172,7 @@
 
   .pricing-squiggle {
     z-index: 1;
-    margin: -25rem;
+    margin: -10rem auto;
   }
 }
 
