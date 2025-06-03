@@ -4,6 +4,12 @@ export interface ServicesContent {
   serviceDescription: string;
   price: string;
   summaryList: string[];
+  pricingBreakdown: PricingBreakdown[];
+}
+
+export interface PricingBreakdown {
+  solutionName: string;
+  solutionPrice: string;
 }
 
 export const servicesContent: Array<ServicesContent> = [
@@ -14,6 +20,11 @@ export const servicesContent: Array<ServicesContent> = [
       "We work meticulously to ensure your text is error-free, aligns with the author's vision, and resonates with your reading audience, bringing clarity, coherence, and polish to your publications.",
     price: "£600 ($780)",
     summaryList: ["Line editing", "Copy-editing", "Proofreading", "Indexing"],
+    pricingBreakdown: [
+      { solutionName: "Editing", solutionPrice: "£18 per 1,000 words" },
+      { solutionName: "Proofreading", solutionPrice: "£12 per 1,000 words" },
+      { solutionName: "Indexing", solutionPrice: "£10 per 1,000 words" },
+    ],
   },
   {
     iconURL: "/assets/icons/ingenious-design-icon.svg",
@@ -27,6 +38,11 @@ export const servicesContent: Array<ServicesContent> = [
       "Page layout",
       "Marketing materials",
     ],
+    pricingBreakdown: [
+      { solutionName: "Covers", solutionPrice: "£250" },
+      { solutionName: "Page design", solutionPrice: "£100" },
+      { solutionName: "Typesetting", solutionPrice: "£1 per page" },
+    ],
   },
   {
     iconURL: "/assets/icons/ingenious-project-management-icon.svg",
@@ -38,6 +54,11 @@ export const servicesContent: Array<ServicesContent> = [
       "Full project management",
       "Production management",
       "Author care",
+    ],
+    pricingBreakdown: [
+      { solutionName: "Publishing Consultancy", solutionPrice: "£80 per hour" },
+      { solutionName: "Full book service", solutionPrice: "£200" },
+      { solutionName: "Production management", solutionPrice: "£150" },
     ],
   },
 ];
