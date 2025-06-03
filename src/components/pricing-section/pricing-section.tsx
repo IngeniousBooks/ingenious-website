@@ -10,12 +10,16 @@ export default function PricingSection() {
     <section id="pricing" className={styles["pricing-section"]}>
       <h2>Pricing</h2>
       <p className={styles["pricing-intro"]}>
-        Of course, every book is unique, and prices vary according to its
-        complexity and the number of services required. Here are estimated costs
-        for a 50K word fiction paperback requiring proofreading, page design and
-        typesetting, and our signature author care.
+        Every book is unique, and prices vary according to the complexity of the
+        project and the number of services required. As highly skilled and
+        experienced editors, designers, and project managers, we are guided by
+        the recommended minimum rates of both the Chartered Institute of Editors
+        and Proofreaders and freelance book design groups.
       </p>
-      <p className={styles["pricing-intro"]}></p>
+      <p className={styles["pricing-intro"]}>
+        That said, we aim to fit as much as possible within preferred clients’
+        budgets, and we offer package discounts for multiple services.
+      </p>
       <div className={styles["service-pricing-wrapper"]}>
         {servicesContent.map(
           ({ iconURL, serviceName, price, pricingBreakdown }) => (
