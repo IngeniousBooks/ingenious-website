@@ -80,21 +80,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 50%;
-  max-width: 100%;
+  width: 80%;
+  max-width: 700px;
   margin-top: 3rem;
   padding: 1rem 2rem;
   background-color: var(--l-cream);
   border-radius: 0.5rem;
   transition: height 0.8s ease-in-out;
-  button {
-    margin: 1rem;
-    text-transform: uppercase;
-    padding: 0.8rem 2rem;
-    font-size: 1rem;
-    border-radius: 0.8rem;
-    transition: box-shadow 0.4s ease-in-out;
-  }
   button:hover {
     background-color: var(--l-cream);
     color: var(--brand-orange);
@@ -171,27 +163,53 @@ button:hover {
   cursor: pointer;
 }
 form {
-  width: 80%;
+  min-width: 90%;
+}
+
+.rc-container {
+  margin-top: 1rem;
+}
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.send-button {
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding: 0.8rem 4rem;
+  border-radius: 0.8rem;
+  text-transform: uppercase;
+  margin: 1rem;
+  transition: box-shadow 0.4s ease-in-out;
 }
 
 @media (max-width: 768px) {
   html {
     font-size: 12px;
   }
+  form {
+    width: 95%;
+  }
   .button {
     font-size: 1rem;
     font-weight: 200;
-    padding: 1rem 1rem;
+    padding: 1rem;
+  }
+  .rc-container {
+    transform: scale(0.9);
+    transform-origin: top left;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
   html {
     font-size: 10px;
   }
-  form {
+  .contact-form-renderer {
     width: 100%;
-    padding: 0;
+    padding: 2rem;
     margin: 0;
   }
   input#contact-name,
@@ -203,5 +221,8 @@ form {
     padding: 0;
     margin: 0;
     overflow: scroll;
+  }
+  .rc-container {
+    transform: scale(0.7);
   }
 }

@@ -171,9 +171,14 @@ export default function ContactSection() {
                 }}
               />
             </div>
-            <button disabled={isLoading || !token || hasSent}>
-              {isLoading ? "Sending" : "Send"}
-            </button>
+            <div className="button-wrapper">
+              <button
+                className="send-button"
+                disabled={isLoading || !token || hasSent}
+              >
+                {isLoading ? "Sending" : "Send"}
+              </button>
+            </div>
           </motion.form>
         )}
         {hasSent && (
