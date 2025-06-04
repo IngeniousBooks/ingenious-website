@@ -4,6 +4,7 @@ import SquiggleDivider from "../ui/squiggle-divider";
 import styles from "./about-section.module.css";
 import ContactSection from "../contact-section/contact-section";
 import { HashLink as Link } from "react-router-hash-link";
+import MeetTheTeam from "./meet-the-team";
 
 export default function AboutSection() {
   return (
@@ -19,6 +20,8 @@ export default function AboutSection() {
             alt="stack of vibrant books"
           />
         </div>
+      </section>
+      <section className={styles["about-section"]}>
         <div className={styles["about-info"]}>
           <p className={styles["our-belief"]}>
             We believe that independent publishers are the spirit and soul of
@@ -71,7 +74,13 @@ export default function AboutSection() {
             alt="A collection of company logos for satisfied clients of ours to include Faber & Faber, Penguin Random House, Hachette Book Group, The FA, Museum of London, and The Open University."
           />
         </div>
+        <SquiggleDivider
+          topColour={houseColours["--white"]}
+          bottomColour={houseColours["--l-cream"]}
+          className={styles["about-squiggle"]}
+        />
       </section>
+      <MeetTheTeam />
       <ContactSection />
     </>
   );
