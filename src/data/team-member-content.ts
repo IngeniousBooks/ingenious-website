@@ -39,7 +39,7 @@ export const teamProfiles: TeamMemberProfile[] = [
       "Hi, I’m Alex, and I look after all things tech at Ingenious.",
       "In addition to crafting brilliant digital experiences for our readers, I'm here to ensure the systems behind the scenes run smoothly, so we can focus on what's important – making great books.",
       "An English major and lifelong bibliophile, I'm convinced the printed book is among humankind's greatest ever inventions; we in publishing are honoured to bear custodianship of this remarkable achievement.",
-      "Outside of books and publishing, you’ll find me tinkering with side projects and new tech, out in nature with my family, writing music, or playing Street Fighter.",
+      "Outside of books and publishing, you'll find me helping others discover the joy of building things with code, tinkering with side projects and new tech, out in nature with my family, writing music, or playing Street Fighter.",
     ],
   },
 ];
