@@ -13,6 +13,12 @@
 .about-hero {
   text-transform: uppercase;
   padding-bottom: 2rem;
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .about-info {
@@ -52,14 +58,15 @@
 
 .squiggle-wrapper {
   position: relative;
-  margin-bottom: -30;
+  width: 100vw;
+  margin-bottom: -30px;
 }
 
 .partners {
   margin-top: 2rem;
   z-index: 2;
   img {
-    width: 100%;
+    width: 100vw;
   }
 }
 
@@ -67,15 +74,13 @@
   z-index: 1;
   margin-top: -15rem;
   margin-bottom: -15rem;
-  margin-left: 0;
-  padding-left: 0;
-  min-width: 100%;
+  background: none;
 }
 
 @media (max-width: 800px) {
   .about-hero {
     img {
-      transform: scale(0.6);
+      transform: scale(0.8);
     }
   }
   .about-the-team {
@@ -86,9 +91,18 @@
 @media (max-width: 600px) {
   .about-hero {
     img {
-      transform: scale(0.6) translateX(-20%);
+      transform: scale(0.7);
     }
   }
+  .about-the-team {
+    max-width: 95%;
+  }
+  .about-info {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
   .about-the-team {
     max-width: 95%;
   }

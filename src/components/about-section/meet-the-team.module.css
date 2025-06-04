@@ -1,0 +1,83 @@
+.meet-the-team-section {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  text-align: center;
+  background-color: var(--l-cream);
+}
+
+.meet-the-team-heading {
+  color: var(--brand-orange);
+  margin-bottom: 2rem;
+}
+
+.team-list {
+  padding-left: 0;
+}
+
+.team-member-profile,
+.odd {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 3rem;
+  text-align: left;
+  z-index: 2;
+  position: relative;
+}
+
+.team-member-profile {
+  flex-direction: row-reverse;
+}
+
+.odd {
+  flex-direction: row;
+  background-color: var(--white);
+}
+
+.team-member-basic-info {
+  text-align: center;
+  justify-content: space-between;
+}
+
+.team-member-image {
+  filter: grayscale(100%);
+  width: 25vw;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  margin: 2rem;
+}
+.team-member-name {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.team-member-job-title {
+  color: var(--brand-orange);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.team-member-bio-text {
+  font-size: 1.5rem;
+  max-width: 50%;
+}
+
+.squiggle {
+  margin-top: -15rem;
+  margin-bottom: -15rem;
+  z-index: 1;
+}
+
+@media (max-width: 1000px) {
+  .team-member-profile,
+  .odd {
+    flex-direction: column;
+    margin: 3rem 0;
+  }
+  .team-member-bio-text {
+    max-width: 95%;
+  }
+}
