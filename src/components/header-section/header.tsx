@@ -54,7 +54,6 @@ export default function Header() {
           <button className={styles["header-button"]}>book a meeting</button>
         </Link>
         <p className="brand">team@ingenious-books.com</p>
-        <p className="brand">(+44) 07822 014130</p>
       </section>
     </header>
   );

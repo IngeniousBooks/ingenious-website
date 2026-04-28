@@ -34,7 +34,7 @@ export const teamProfiles: TeamMemberProfile[] = [
   {
     personName: "Alex Davis",
     jobTitle: "Director of Technology",
-    imageLink: "/assets/staff/ad.png",
+    imageLink: "/assets/staff/ad-photo.png",
     bioText: [
       "Hi, I’m Alex, and I look after all things tech at Ingenious.",
       "In addition to crafting brilliant digital experiences for our readers, I'm here to ensure the systems behind the scenes run smoothly, so we can focus on what's important – making great books.",

@@ -12,11 +12,12 @@ export default function Footer() {
           <h3>back to top</h3>
         </div>
       }
-      <address>The Kiln, 2 Copenhagen St, Worcester WR1 2HB</address>
+      <p>Company Number: 14292549</p>
+      <address>6 Netherley Lane, Pendock, GL19 3PP</address>
       <div className={styles["footer-squiggle"]}>
         <SquigglyLine colour={houseColours["--brand-orange"]} />
       </div>
-      <p className={styles["copyright"]}>&copy; Copyright 2024 Ingenious</p>
+      <p className={styles["copyright"]}>&copy; Copyright 2026 Ingenious</p>
       <Link
         className={styles["privacy-link"]}
         target="_blank"

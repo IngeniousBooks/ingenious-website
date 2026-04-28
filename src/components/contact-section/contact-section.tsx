@@ -53,7 +53,7 @@ export default function ContactSection() {
 
     if (!isValidEmail(formData.email)) {
       setInvalidSubmitMessage(
-        "Please check you've provided a valid email address"
+        "Please check you've provided a valid email address",
       );
       setIsInvalidSubmit(true);
       setIsLoading(false);
@@ -68,7 +68,7 @@ export default function ContactSection() {
         const responseStatus = await submitContact(
           formData.contactName,
           formData.email,
-          formData.message
+          formData.message,
         );
         if (responseStatus === 200) {
           setIsLoading(false);
@@ -109,7 +109,6 @@ export default function ContactSection() {
     <section className="contact-section">
       <h2 id="contact">Let's discuss your project</h2>
       <p className="light mid-heading">team@ingenious-books.com</p>
-      <p className="light mid-heading">(+44) 07822 014130</p>
 
       <motion.div layout className="contact-form-renderer">
         {!hasSent && (
